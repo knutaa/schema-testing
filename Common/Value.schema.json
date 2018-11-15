@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Value.schema.json",
+    "title": "Value",
+    "definitions": {
+        "Value": {
+            "$id": "#Value",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {}
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductRequest.schema.json",
+    "title": "ProductRequest",
+    "definitions": {
+        "ProductRequest": {
+            "$id": "#ProductRequest",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "referredProduct": {
+                            "$ref": "ProductRef.schema.json#ProductRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

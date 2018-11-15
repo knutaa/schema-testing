@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "RealizingServiceRef.schema.json",
+    "title": "RealizingServiceRef",
+    "definitions": {
+        "RealizingServiceRef": {
+            "$id": "#RealizingServiceRef",
+            "description": "RealizingService reference. RealizingService is a link to the service that realizes the product.",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the service"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the service"
+                        },
+                        "@referredType": {
+                            "type": "string",
+                            "description": "The actual type of the target instance when needed for disambiguation."
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "AgreementSpecificationRelationship.schema.json",
+    "title": "AgreementSpecificationRelationship",
+    "definitions": {
+        "AgreementSpecificationRelationship": {
+            "$id": "#AgreementSpecificationRelationship",
+            "description": "A relationship between agreement specifications. Typical relationships are substitution and dependency.",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of an agreement specification."
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the related agreement specification."
+                        },
+                        "type": {
+                            "type": "string",
+                            "description": "Type of relationship such as, substitution or dependency."
+                        },
+                        "validFor": {
+                            "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+                            "description": "The period for which the relationship is valid"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

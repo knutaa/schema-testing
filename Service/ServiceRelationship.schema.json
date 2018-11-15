@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ServiceRelationship.schema.json",
+    "title": "ServiceRelationship",
+    "definitions": {
+        "ServiceRelationship": {
+            "$id": "#ServiceRelationship",
+            "description": "Describes links with services of the same category (useful for bundled services)",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "relationshipType": {
+                            "type": "string",
+                            "description": "Describes links with services of the same category (useful for bundled services)"
+                        },
+                        "service": {
+                            "$ref": "Service.schema.json#Service"
+                        },
+                        "serviceRef": {
+                            "$ref": "ServiceRef.schema.json#ServiceRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

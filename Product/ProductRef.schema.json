@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ProductRef.schema.json",
+    "title": "ProductRef",
+    "definitions": {
+        "ProductRef": {
+            "$id": "#ProductRef",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "href": {
+                            "type": "string",
+                            "description": "Reference of the product"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Unique identifier of the product"
+                        },
+                        "relatedParty": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../EngagedParty/RelatedPartyRef.schema.json#RelatedPartyRef"
+                            }
+                        },
+                        "@referredType": {
+                            "type": "string",
+                            "description": "The actual type of the target instance when needed for disambiguation."
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ChangeRequestCharacteristic.schema.json",
+    "title": "ChangeRequestCharacteristic",
+    "definitions": {
+        "ChangeRequestCharacteristic": {
+            "$id": "#ChangeRequestCharacteristic",
+            "description": "Characteristics of the change request to instantiate or to modify",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "Name of the characteristic."
+                        },
+                        "value": {
+                            "type": "string",
+                            "description": "Value of the characteristic."
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "CashMethod.schema.json",
+    "title": "CashMethod",
+    "definitions": {
+        "CashMethod": {
+            "$id": "#CashMethod",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "details": {
+                            "$ref": "CashDetails.schema.json#CashDetails"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

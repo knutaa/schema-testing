@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "PartyBill.schema.json",
+    "title": "PartyBill",
+    "definitions": {
+        "PartyBill": {
+            "$id": "#PartyBill",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {}
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

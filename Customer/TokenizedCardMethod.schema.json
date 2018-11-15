@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "TokenizedCardMethod.schema.json",
+    "title": "TokenizedCardMethod",
+    "definitions": {
+        "TokenizedCardMethod": {
+            "$id": "#TokenizedCardMethod",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "details": {
+                            "$ref": "TokenizedCardDetails.schema.json#TokenizedCardDetails"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

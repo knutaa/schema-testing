@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "BankAccountDebitMethod.schema.json",
+    "title": "BankAccountDebitMethod",
+    "definitions": {
+        "BankAccountDebitMethod": {
+            "$id": "#BankAccountDebitMethod",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "details": {
+                            "$ref": "BankAccountDebitDetails.schema.json#BankAccountDebitDetails"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

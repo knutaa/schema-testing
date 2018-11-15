@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ServiceOrderItem.schema.json",
+    "title": "ServiceOrderItem",
+    "definitions": {
+        "ServiceOrderItem": {
+            "$id": "#ServiceOrderItem",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "action": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "state": {
+                            "type": "string"
+                        },
+                        "service": {
+                            "$ref": "Service.schema.json#Service"
+                        },
+                        "orderItemRelationship": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Customer/OrderItemRelationship.schema.json#OrderItemRelationship"
+                            }
+                        },
+                        "appointment": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "../Customer/AppointmentRef.schema.json#AppointmentRef"
+                            }
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

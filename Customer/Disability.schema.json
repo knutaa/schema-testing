@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Disability.schema.json",
+    "title": "Disability",
+    "definitions": {
+        "Disability": {
+            "$id": "#Disability",
+            "description": "Lack or inadequate strength or ability",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "disability": {
+                            "type": "string",
+                            "description": "Physical or mental handicap"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

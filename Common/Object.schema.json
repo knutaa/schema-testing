@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Object.schema.json",
+    "title": "Object",
+    "definitions": {
+        "Object": {
+            "$id": "#Object",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "type": {
+                            "type": "string"
+                        },
+                        "uri": {
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "$ref": "CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}

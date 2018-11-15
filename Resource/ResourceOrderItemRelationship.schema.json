@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ResourceOrderItemRelationship.schema.json",
+    "title": "ResourceOrderItemRelationship",
+    "definitions": {
+        "ResourceOrderItemRelationship": {
+            "$id": "#ResourceOrderItemRelationship",
+            "type": "object",
+            "allOf": [
+                {
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "description": "Type of the order item relationship"
+                        },
+                        "orderItem": {
+                            "$ref": "ResourceOrderItemRef.schema.json#ResourceOrderItemRef"
+                        }
+                    }
+                },
+                {
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                }
+            ]
+        }
+    }
+}
