@@ -1,12 +1,16 @@
 {
-  "name": "validate",
+  "name": "validate_schemas",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "validate_schemas.js",
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0",
-    "run": "node validate.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": node index.js .
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "collections": "^5.1.5",
+    "jsonschema": "^1.2.4"
+  }
 }
