@@ -7,7 +7,7 @@
             "$id": "#Account",
             "description": "Generic Account structure used to define commonalities between sub concepts of PartyAccount and Financial Account.",
             "type": "object",
-            "xallOf": [
+            "allOf": [
                 {
                     "properties": {
                         "creditLimit": {
