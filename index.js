@@ -2,15 +2,14 @@
 
 const fs = require('fs');
 const Validator = require('jsonschema').Validator;
-const { performance } = require('perf_hooks');
 
 const DIR = process.argv[2];
 const SCHEMA = getJsonSchema();
 
-const t0 = performance.now();
+const t0 = Date.now();
 walk(DIR, (err,files) => {
 
-    const t1 = performance.now();
+    const t1 = Date.now();
 	if(err) {
 		console.log("error: " + err);
 		return;
@@ -25,7 +24,7 @@ walk(DIR, (err,files) => {
     executeAllPromises(promises)
     .then(res => {
 
-        const t2 = performance.now();
+        const t2 = Date.now();
 
         console.log('SCHEMA VALIDATION');
         console.log('=================');
@@ -396,3 +395,4 @@ function executeAllPromises(promises) {
   
     })
 }
+  
