@@ -56,7 +56,8 @@ walk(DIR, (err,files) => {
         console.log('# schemas     : ' + promises.length + ' files processed');
         console.log('# errors      : ' + res.errors.length);
         console.log('# validate ok : ' + res.results.length);
-        console.log('# issues      : ' + issues.length);
+        console.log('# issues      : ' + issues.length + ' files / ' + 
+                                         issues.reduce((t,v)=>t+v.issues.length,0) + ' issues');
         console.log();
         console.log('total time: ' + Number(((t1-t0)/1000.0).toFixed(2)) + " seconds");
         console.log();
