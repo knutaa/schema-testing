@@ -1,15 +1,32 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 const Validator = require('jsonschema').Validator;
-
-const DIR = process.argv[2];
-const SCHEMA = getJsonSchema();
+const { readSchemaSync, walk, executeAllPromises } = require('./utilities.js');
 
 const t0 = Date.now();
+
+const DIR = process.argv[2];
+const CONFDIR = process.argv[3];
+
+const SCHEMA = readSchemaSync(path.join(CONFDIR + '/', 'VALIDATIONSCHEMA.json'));
+const METASCHEMA = readSchemaSync(path.join(CONFDIR + '/', 'METASCHEMA.json'));
+
+console.log('SCHEMA VALIDATION');
+console.log('=================');
+
+if(!SCHEMA) {
+    console.log("error: unable to read and/or parse validation schema");
+    process.exit(1);
+}
+if(!METASCHEMA) {
+    console.log("error: unable to read and/or parse meta schema");
+    process.exit(1);
+}
+
 walk(DIR, (err,files) => {
 
-    const t1 = Date.now();
 	if(err) {
 		console.log("error: " + err);
 		return;
@@ -17,22 +34,31 @@ walk(DIR, (err,files) => {
     
     // filter / remove files not to be validated
     const promises = files
-                .filter(file => file.endsWith('.json'))
-                .filter(file => !file.includes('/package') && !file.includes('/node_modules/'))
-                .map(file => validateSchema(file));
+                        .filter(file => file.endsWith('.json') &&
+                                        !file.includes('/.circleci/') &&
+                                        !file.includes('/package') && !file.includes('/node_modules/'))
+                        .map(file => validateSchema(file));
 
     executeAllPromises(promises)
     .then(res => {
 
-        const t2 = Date.now();
+        const t1 = Date.now();
 
-        console.log('SCHEMA VALIDATION');
-        console.log('=================');
+        // combine issues from the errors and results parts
+        const issues = res.results.filter(r => r.issues.length>0)
+                        .concat(res.errors.filter(r => r.issues.length>0).
+                            map(s => {
+                                const o = {"file": s.file, "issues": s.issues};
+                                return o
+                            })
+                        );
+
         console.log('# schemas     : ' + promises.length + ' files processed');
         console.log('# errors      : ' + res.errors.length);
         console.log('# validate ok : ' + res.results.length);
+        console.log('# issues      : ' + issues.length);
         console.log();
-        console.log('total time: ' + Number(((t2-t0)/1000.0).toFixed(2)) + " seconds");
+        console.log('total time: ' + Number(((t1-t0)/1000.0).toFixed(2)) + " seconds");
         console.log();
 
         if(res.errors.length>0) {
@@ -46,11 +72,23 @@ walk(DIR, (err,files) => {
             });
         }
 
-        if(res.results.length>0) {
+        if(issues.length>0) {
             console.log();
-            console.log('OK - schemas without error(s):');
-            res.results.forEach(r => console.log('... ' + r.file));
+            console.log('ISSUES - schemas with issue(s):');
+            issues.forEach(item => {
+                console.log('... ' + item.file);
+                item.issues.forEach(issue => console.log('... ... ' + issue));
+                console.log();
+            });
         }
+
+        const results = res.results.filter(x => x.issues.length===0);
+        if(results.length>0) {
+            console.log();
+            console.log('OK - schemas without error(s) or issue(s):');
+            results.forEach(r => console.log('... ' + r.file));
+        }
+        console.log();
 
         process.exit(res.errors.length);
 
@@ -64,335 +102,116 @@ walk(DIR, (err,files) => {
 
 function validateSchema(file) {
     return new Promise(function(resolve, reject) {
-        var jsonString;
+        
         var schema;
-
         try {
-            jsonString = fs.readFileSync(file);
+            const jsonString = fs.readFileSync(file);
             schema = JSON.parse(jsonString);
         } catch(error) {
-            return reject({ 'errors': [error]})
+            return reject({'file': file, 'errors': [error], 'issues': []})
         }
 
         const validator = new Validator();
+
         const options = { 'nestedErrors': true };
-    
-        validator.addSchema(getCoreJsonSchema(), 'http://json-schema.org/draft-07/schema#');
-        
-        var result = validator.validate(schema, SCHEMA, options);
+
+        validator.addSchema(METASCHEMA, 'http://json-schema.org/draft-07/schema#');
+
+        const result = validator.validate(schema, SCHEMA, options);
+
+        const issues = checkSchemaIssues(schema);
 
         if(result.errors && result.errors.length>0) {
-            return reject({'file': file, 'errors': result.errors});
+            return reject({'file': file, 'errors': result.errors, 'issues': issues});
         } else {
-            return resolve({'file': file, 'validate': true});
+            return resolve({'file': file, 'issues': issues});
         }
     })
 }
 
 //
-// Specific schema validation additions reflecting the TMForum API schema approach 
+// custom validation / checking for issues not included in the validation schema
 //
-function getJsonSchema() {
-    return {
-        allOf: [
-            {
-                "properties": {
-                    "$schema": { "type": "string" },
-                    "$id": { "type": "string" },
-                    "title": { "type": "string" },
-                    "description": { "type": "string" },
-                    "definitions": { "type": "object" }
-                },
-                "required": ["$schema", "$id", "title", "definitions"],
-                additionalProperties: false
-            },
-            {
-                "properties": {
-                    "definitions": {
-                        "patternProperties": {
-                            ".*": {
-                                "properties": {
-                                    "$id": { "type": "string" },
-                                    "type": { "type": "string" },
-                                    "description": { "type": "string" },
-                                    "allOf": { "type": "array" },
-                                    "properties": { "type": "object" },
-                                    "enum": { "type": "array" },
-                                    "required": { "type": "array" },
-                                    "dependencies": { "type": "object" },
-                                },
-                                "oneOf": [ { "required": [ "allOf" ] },
-                                           { "required": [ "properties" ] },
-                                           { "required": [ "enum" ] }
-                                ],
-                                "required": ["type", "$id"],
-                                additionalProperties: false
-                            }
-                        }
-                    }
-                }
-            }, 
-            {
-                "type": "object",
-                "propertyNames": {
-                 "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
-                }
-            },
-            { '$ref': "http://json-schema.org/draft-07/schema#" }
-        ]
-    }
-}
+function checkSchemaIssues(schema) {
+    var res = [];
 
-//
-// the draft-07 schema (wrapped in a function to put at end)
-//
-function getCoreJsonSchema() {
-    return {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "$id": "http://json-schema.org/draft-07/schema#",
-        "title": "Core schema meta-schema",
-        "definitions": {
-            "schemaArray": {
-                "type": "array",
-                "minItems": 1,
-                "items": { "$ref": "#" }
-            },
-            "nonNegativeInteger": {
-                "type": "integer",
-                "minimum": 0
-            },
-            "nonNegativeIntegerDefault0": {
-                "allOf": [
-                    { "$ref": "#/definitions/nonNegativeInteger" },
-                    { "default": 0 }
-                ]
-            },
-            "simpleTypes": {
-                "enum": [
-                    "array",
-                    "boolean",
-                    "integer",
-                    "null",
-                    "number",
-                    "object",
-                    "string"
-                ]
-            },
-            "stringArray": {
-                "type": "array",
-                "items": { "type": "string" },
-                "uniqueItems": true,
-                "default": []
+    try {
+        const title = schema.title;
+        const definitions = schema.definitions;
+
+        var allOf = [];
+        if(definitions && definitions[title] && definitions[title].allOf) {
+            allOf = definitions[title].allOf
+        }
+        var hasPolyPattern=false;
+        allOf.forEach(item => {
+
+            // polymorphicPattern?
+            if(item['$ref'] && item['$ref'].includes('polymorphicPattern')) hasPolyPattern=true;
+
+            if(item.properties === undefined) {
+                return;
             }
-        },
-        "type": ["object", "boolean"],
-        "properties": {
-            "$id": {
-                "type": "string",
-                "format": "uri-reference"
-            },
-            "$schema": {
-                "type": "string",
-                "format": "uri"
-            },
-            "$ref": {
-                "type": "string",
-                "format": "uri-reference"
-            },
-            "$comment": {
-                "type": "string"
-            },
-            "title": {
-                "type": "string"
-            },
-            "description": {
-                "type": "string"
-            },
-            "default": true,
-            "readOnly": {
-                "type": "boolean",
-                "default": false
-            },
-            "examples": {
-                "type": "array",
-                "items": true
-            },
-            "multipleOf": {
-                "type": "number",
-                "exclusiveMinimum": 0
-            },
-            "maximum": {
-                "type": "number"
-            },
-            "exclusiveMaximum": {
-                "type": "number"
-            },
-            "minimum": {
-                "type": "number"
-            },
-            "exclusiveMinimum": {
-                "type": "number"
-            },
-            "maxLength": { "$ref": "#/definitions/nonNegativeInteger" },
-            "minLength": { "$ref": "#/definitions/nonNegativeIntegerDefault0" },
-            "pattern": {
-                "type": "string",
-                "format": "regex"
-            },
-            "additionalItems": { "$ref": "#" },
-            "items": {
-                "anyOf": [
-                    { "$ref": "#" },
-                    { "$ref": "#/definitions/schemaArray" }
-                ],
-                "default": true
-            },
-            "maxItems": { "$ref": "#/definitions/nonNegativeInteger" },
-            "minItems": { "$ref": "#/definitions/nonNegativeIntegerDefault0" },
-            "uniqueItems": {
-                "type": "boolean",
-                "default": false
-            },
-            "contains": { "$ref": "#" },
-            "maxProperties": { "$ref": "#/definitions/nonNegativeInteger" },
-            "minProperties": { "$ref": "#/definitions/nonNegativeIntegerDefault0" },
-            "required": { "$ref": "#/definitions/stringArray" },
-            "additionalProperties": { "$ref": "#" },
-            "definitions": {
-                "type": "object",
-                "additionalProperties": { "$ref": "#" },
-                "default": {}
-            },
-            "properties": {
-                "type": "object",
-                "additionalProperties": { "$ref": "#" },
-                "default": {}
-            },
-            "patternProperties": {
-                "type": "object",
-                "additionalProperties": { "$ref": "#" },
-                "propertyNames": { "format": "regex" },
-                "default": {}
-            },
-            "dependencies": {
-                "type": "object",
-                "additionalProperties": {
-                    "anyOf": [
-                        { "$ref": "#" },
-                        { "$ref": "#/definitions/stringArray" }
-                    ]
-                }
-            },
-            "propertyNames": { "$ref": "#" },
-            "const": true,
-            "enum": {
-                "type": "array",
-                "items": true,
-                "minItems": 1,
-                "uniqueItems": true
-            },
-            "type": {
-                "anyOf": [
-                    { "$ref": "#/definitions/simpleTypes" },
-                    {
-                        "type": "array",
-                        "items": { "$ref": "#/definitions/simpleTypes" },
-                        "minItems": 1,
-                        "uniqueItems": true
+
+            // from here handling of "properties" topics
+
+            const keys = Object.keys(item.properties);
+
+            // check for empty properties
+            if(keys.length===0) {
+                res.push(title + ' :: no properties defined')
+                return;
+            }
+
+            // check if possible Ref but not named as Ref?
+            const ignore = ['id', 'href', 'name'];
+            const realProps = keys.filter(k => !ignore.includes(k));
+            if(realProps.length<=1 && !title.endsWith('Ref')) {
+                res.push(title + ' :: should be renamed as ' + title + 'Ref if this is a reference entity');
+            }
+
+            keys.forEach(p => {
+
+                // some properties excluded from analysis
+                if(ignore.includes(p)) return;
+
+                const prop = item.properties[p];
+
+                // check for expected properties
+                const expecting = ['example', 'description'];
+                expecting.forEach(exp => {
+                    if(prop[exp] === undefined) {
+                        res.push(p + ' :: no ' + exp + ' value')
                     }
-                ]
-            },
-            "format": { "type": "string" },
-            "contentMediaType": { "type": "string" },
-            "contentEncoding": { "type": "string" },
-            "if": { "$ref": "#" },
-            "then": { "$ref": "#" },
-            "else": { "$ref": "#" },
-            "allOf": { "$ref": "#/definitions/schemaArray" },
-            "anyOf": { "$ref": "#/definitions/schemaArray" },
-            "oneOf": { "$ref": "#/definitions/schemaArray" },
-            "not": { "$ref": "#" }
-        },
-        "required": [],
-        "default": true
-    }
+                });
 
-}
+                // issue in case if 'type' and similar labels that should not be used    
+                const avoid = ['type', 'baseType', 'schemaLocation'];
+                avoid.forEach(item => {
+                    if(p === item) {
+                        res.push(p + ' :: rename to avoid conflict with @' + item)
+                    }
+                });
 
+                // issue in case if properties that should have format
+                if(prop.format === undefined) {   
+                    const formatCandidates = ['DATE', 'TIME', 'URI', 'URL'];
+                    formatCandidates.forEach(item => {
+                        if(p.toUpperCase().includes(item)) {
+                            res.push(p + ' :: recommend to add format');
+                        }
+                    });
+                };
 
-// support stuff
-
-function walk(dir, done) {
-    var results = [];
-    // console.log("walk: " + JSON.stringify(dir));
-	fs.readdir(dir, function(err, list) {
-	  if (err) return done(err);
-	  var i = 0;
-	  (function next() {
-		var file = list[i++];
-		if (!file) return done(null, results);
-		file = dir + '/' + file;
-		fs.stat(file, function(err, stat) {
-		  if (stat && stat.isDirectory()) {
-			walk(file, function(err, res) {
-			  results = results.concat(res);
-			  next();
-			});
-		  } else {
-			results.push(file);
-			next();
-		  }
-		});
-	  })();
-	});
-};
-
-//
-// Support for collecting all errors from list of promises
-// (inspired by https://stackoverflow.com/questions/30362733/handling-errors-in-promise-all) 
-//  
-
-function executeAllPromises(promises) {
-    // Wrap all Promises in a Promise that will always "resolve"
-    var resolvingPromises = promises.map(function(promise) {
-      return new Promise(function(resolve) {
-        var payload = new Array(2);
-        promise.then(function(result) {
-            payload[0] = result
-          })
-          .catch(function(error) {
-            payload[1] = error
-          })
-          .then(function() {
-            /* 
-             * The wrapped Promise returns an array:
-             * The first position in the array holds the result (if any)
-             * The second position in the array holds the error (if any)
-             */
-            resolve(payload)
-          })
-      })
-    })
-  
-    var errors = [];
-    var results = [];
-  
-    // Execute all wrapped Promises
-    return Promise.all(resolvingPromises)
-      .then(function(items) {
-        items.forEach(function(payload) {
-          if (payload[1]) {
-            errors.push(payload[1])
-          } else {
-            results.push(payload[0])
-          }
+            })
         });
-  
-        return {
-          errors: errors,
-          results: results
+        
+        if(!hasPolyPattern && allOf.length>0) {
+            res.push(title + ' :: missing polymorphicPattern');
         }
-  
-    })
+
+    } catch(error) {
+        res.push('Failing to check for issues: ' + error);
+    }
+    return res;
 }
-  

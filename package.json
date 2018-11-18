@@ -1,22 +1,16 @@
 {
-  "name": "validate_schemas",
+  "name": "validate",
   "version": "1.0.0",
-  "description": "",
-  "main": "validate_schemas.js",
+  "description": "Validation of TMForum API schema specifications",
+  "main": "validate.js",
   "scripts": {
-   "test": "echo \"Error: no test specified\" && exit 1",
-   "start": "node .circleci/validate.js ."
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate": "node .circleci/validate.js . .circleci"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "collections": "^5.1.5",
     "jsonschema": "^1.2.4",
-    "perf_hooks": "0.0.1"
-  },
-  "engines": {
-    "node": ">=8.10",
-    "npm": ">=6.0"
+    "path": "^0.12.7"
   }
 }
-
