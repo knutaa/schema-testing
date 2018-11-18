@@ -167,7 +167,7 @@ function checkSchemaIssues(schema) {
             // check if possible Ref but not named as Ref?
             const ignore = ['id', 'href', 'name'];
             const realProps = keys.filter(k => !ignore.includes(k));
-            if(realProps.length<=1 && !title.endsWith('Ref')) {
+            if(realProps.length<=1 && !realProps.includes('value') && !title.endsWith('Ref')) {
                 res.push(title + ' :: should be renamed as ' + title + 'Ref if this is a reference entity');
             }
 
