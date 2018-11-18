@@ -19,7 +19,7 @@ jobs:
     steps:
       - checkout
 
-      - run: mv ~/repo/.circleli/package.json ~/repo
+      - run: mv ~/repo/.circleci/package.json ~/repo
 
       # Download and cache dependencies
       - restore_cache:
