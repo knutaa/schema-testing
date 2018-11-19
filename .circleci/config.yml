@@ -42,3 +42,6 @@ jobs:
       
       - store_artifacts:
           path: ~/repo/validation_results.txt
+
+      - store_test_results:
+          path:  ~/repo/validation_results.txt
