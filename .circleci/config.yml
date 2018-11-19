@@ -41,6 +41,7 @@ jobs:
       - run: 
           name: Test result set-up
           commmand: mkdir /tmp/mocha
+          
       - run: 
           name: Validate
           command: node .circleci/validate.js . .circleci > /tmp/mocha/validation_results.txt
@@ -49,4 +50,4 @@ jobs:
           path: /tmp/mocha/validation_results.txt
 
       - store_test_results:
-          path:  /tmp/validation_results.txt
+          path:  /tmp/mocha/validation_results.txt
