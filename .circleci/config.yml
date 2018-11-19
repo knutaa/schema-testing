@@ -36,7 +36,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run validation
-      - run: npm run validate
+      - run: 
+          name: Validate
+          command: node .circleci/validate.js . .circleci > validation_results.txt
       
       - store_artifacts:
           path: ~/repo/validation_results.txt
