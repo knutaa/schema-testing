@@ -6,4 +6,4 @@ https://30-157779337-gh.circle-artifacts.com/0/home/circleci/repo/validation_res
 
 Added some text for testing skip
 
-[![Downloads](https://30-157779337-gh.circle-artifacts.com/0/home/circleci/repo/validation_results.txt)]
+[![Downloads](https://30-157779337-gh.circle-artifacts.com/0/home/circleci/repo/validation_results.txt)](https://30-157779337-gh.circle-artifacts.com/0/home/circleci/repo/validation_results.txt)
