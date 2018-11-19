@@ -19,9 +19,7 @@ jobs:
     steps:
       - checkout
 
-      - run: 
-          name: Node set-up
-          commmand: mv ~/repo/.circleci/package.json ~/repo
+      - run: mv ~/repo/.circleci/package.json ~/repo
 
       # Download and cache dependencies
       - restore_cache:
@@ -38,9 +36,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run validation
-      - run: 
-          name: Test result set-up
-          commmand: mkdir /tmp/mocha
+      - run: mkdir /tmp/mocha
           
       - run: 
           name: Validate
