@@ -38,10 +38,10 @@ jobs:
       # run validation
       - run: 
           name: Validate
-          command: node .circleci/validate.js . .circleci > validation_results.txt
+          command: node .circleci/validate.js . .circleci > /tmp/validation_results.txt
       
       - store_artifacts:
-          path: ~/repo/validation_results.txt
+          path: /tmp/validation_results.txt
 
       - store_test_results:
-          path:  ~/repo/validation_results.txt
+          path:  /tmp/validation_results.txt
