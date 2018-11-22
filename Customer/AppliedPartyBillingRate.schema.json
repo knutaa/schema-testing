@@ -12,7 +12,7 @@
                     "properties": {}
                 },
                 {
-                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern"
+                    "$ref": "../Common/CommonComponents.schema.json#polymorphicPattern_error"
                 }
             ]
         }
