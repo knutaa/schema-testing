@@ -40,7 +40,7 @@ jobs:
           
       - run: 
           name: Validate
-          command: node .circleci/validate.js . .circleci > /tmp/validation_results.txt
+          command: node .circleci/validate.js . .circleci > /tmp/validation_results.txt || export ERROR=$?
       
       - store_artifacts:
           path: /tmp/validation_results.txt
