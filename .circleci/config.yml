@@ -55,6 +55,6 @@ jobs:
             git config user.email "${EMAIL}"
             git config user.name "Deployment Bot"
             git add validation/$FILE
-            git commit --allow-empty -m "Validation result"
+            git commit --allow-empty -m "Validation result [skip ci]"
             # Push quietly to prevent showing the token in log
             git push -q https://${GITHUB}@github.com/knutaa/schema-testing.git master
