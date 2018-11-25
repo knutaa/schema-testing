@@ -49,12 +49,13 @@ jobs:
           name: Push validation results
           command: |
             FILE=validation-`date -u "+%Y-%m-%dT%H:%M:%SZ"`.txt
-            mkdir -p validation
-            cp /tmp/validation_results.txt validation/$FILE
+            DIR=".circleci/validation"
+            mkdir -p $DIR
+            cp /tmp/validation_results.txt $DIR/$FILE
             git config credential.helper 'cache --timeout=120'
             git config user.email "${EMAIL}"
             git config user.name "Deployment Bot"
-            git add validation/$FILE
+            git add $DIR/$FILE
             git commit --allow-empty -m "Validation result [skip ci]"
             # Push quietly to prevent showing the token in log
             git push -q https://${GITHUB}@github.com/knutaa/schema-testing.git master
