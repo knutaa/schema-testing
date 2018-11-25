@@ -40,23 +40,21 @@ jobs:
           
       - run: 
           name: Validate
-          command: node .circleci/validate.js . .circleci > /tmp/mocha/validation_results.txt
+          command: node .circleci/validate.js . .circleci > /tmp/validation_results.txt
       
       - store_artifacts:
-          path: /tmp/mocha/validation_results.txt
-
-      - store_test_results:
-          path:  /tmp/mocha/validation_results.txt
+          path: /tmp/validation_results.txt
 
       - deploy:
-          name: Trigger docs deployment
+          name: Push validation results
           command: |
             FILE=validation-`date -u "+%Y-%m-%dT%H:%M:%SZ"`.txt
-            cp /tmp/mocha/validation_results.txt $FILE
+            mkdir -p validation
+            cp /tmp/validation_results.txt validation/$FILE
             git config credential.helper 'cache --timeout=120'
             git config user.email "${EMAIL}"
             git config user.name "Deployment Bot"
-            git add $FILE
-            git commit --allow-empty -m "Add results"
+            git add validation/$FILE
+            git commit --allow-empty -m "Validation result"
             # Push quietly to prevent showing the token in log
             git push -q https://${GITHUB}@github.com/knutaa/schema-testing.git master
