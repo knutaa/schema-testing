@@ -50,12 +50,14 @@ jobs:
 
       - deploy:
           name: Trigger docs deployment
-          working_directory: /tmp/mocha
+          working_directory: ~/repo/schema-testing
           command: |
-            mkdir /tmp/mocha/.git
+            set FILE=validation-`date -u "+%Y-%m-%dT%H:%M:%SZ"`.txt
+            cp /tmp/mocha/validation_results.txt ~/repo/schema-testing/.circleci/$FILE
             git config credential.helper 'cache --timeout=120'
             git config user.email "knut.johannessen@online.no"
             git config user.name "Deployment Bot"
-            git commit --allow-empty -m "Trigger deployment"
+            git add .circleci/$FILE
+            git commit --allow-empty 
             # Push quietly to prevent showing the token in log
-            # git push -q https://${DOCS_GITHUB_TOKEN}@github.com/knutaa/schema-testing.git master
+            git push -q https://github.com/knutaa/schema-testing.git master
