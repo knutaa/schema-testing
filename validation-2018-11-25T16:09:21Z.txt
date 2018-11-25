@@ -1,0 +1,2664 @@
+SCHEMA VALIDATION
+=================
+# schemas     : 318 files processed
+# errors      : 0
+# validate ok : 318
+# issues      : 316 files / 2016 issues
+
+total time: 3 seconds
+
+
+ISSUES - schemas with issue(s):
+... ./Common/Address.schema.json
+... ... city :: no example value
+... ... country :: no example value
+... ... locality :: no example value
+... ... postcode :: no example value
+... ... stateOrProvince :: no example value
+... ... streetName :: no example value
+... ... streetNr :: no example value
+... ... streetNrLast :: no example value
+... ... streetNrLastSuffix :: no example value
+... ... streetNrSuffix :: no example value
+... ... streetSuffix :: no example value
+... ... streetType :: no example value
+... ... subAddress :: no example value
+... ... subAddress :: no description value
+
+... ./Common/AddressRef.schema.json
+... ... @referredType :: no example value
+
+... ./Common/AlternateGeographicAddress.schema.json
+... ... AlternateGeographicAddress :: no properties defined
+
+... ./Common/Area.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+
+... ./Common/Association.schema.json
+... ... description :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+... ... associationSpec :: no example value
+... ... associationSpec :: no description value
+... ... associationRole :: no example value
+... ... associationRole :: no description value
+... ... constraint :: no example value
+... ... constraint :: no description value
+
+... ./Common/AssociationRole.schema.json
+... ... isSource :: no example value
+... ... role :: no example value
+
+... ./Common/AssociationRoleSpec.schema.json
+... ... aggregation :: no example value
+... ... aggregation :: no description value
+... ... defaulQuantity :: no example value
+... ... defaulQuantity :: no description value
+... ... entityType :: no example value
+... ... entityType :: no description value
+... ... isNavigable :: no example value
+... ... isNavigable :: no description value
+... ... isSource :: no example value
+... ... isSource :: no description value
+... ... maxQuantity :: no example value
+... ... maxQuantity :: no description value
+... ... minQuantity :: no example value
+... ... minQuantity :: no description value
+... ... role :: no example value
+... ... role :: no description value
+
+... ./Common/AssociationSpecRef.schema.json
+... ... @referredType :: no example value
+
+... ./Common/AssociationSpecification.schema.json
+... ... description :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+... ... constraint :: no example value
+... ... constraint :: no description value
+... ... associationRoleSpec :: no example value
+... ... associationRoleSpec :: no description value
+
+... ./Common/Attachment.schema.json
+... ... description :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... url :: no example value
+
+... ./Common/AttachmentRef.schema.json
+... ... description :: no example value
+... ... url :: no example value
+... ... url :: no description value
+... ... url :: recommend to add format
+... ... @referredType :: no example value
+
+... ./Common/BusinessInteraction.schema.json
+... ... description :: no example value
+... ... description :: no description value
+... ... interactionData :: no example value
+... ... interactionData :: no description value
+... ... interactionDataComplete :: no example value
+... ... interactionDataComplete :: no description value
+... ... interactionDataStatus :: no example value
+... ... interactionDataStatus :: no description value
+
+... ./Common/CalendarPeriod.schema.json
+... ... day :: no example value
+... ... status :: no example value
+... ... timeZone :: no example value
+... ... timeZone :: recommend to add format
+... ... hourPeriod :: no example value
+... ... hourPeriod :: no description value
+
+... ./Common/ChangeRequest.schema.json
+... ... actualEndTime :: no example value
+... ... actualStartTime :: no example value
+... ... budget :: no example value
+... ... channel :: no example value
+... ... completionDate :: no example value
+... ... currency :: no example value
+... ... description :: no example value
+... ... externalId :: no example value
+... ... impact :: no example value
+... ... plannedEndTime :: no example value
+... ... plannedStartTime :: no example value
+... ... priority :: no example value
+... ... requestDate :: no example value
+... ... requestType :: no example value
+... ... risk :: no example value
+... ... riskMitigationPlan :: no example value
+... ... riskValue :: no example value
+... ... scheduledDate :: no example value
+... ... status :: no example value
+... ... attachment :: no example value
+... ... workLog :: no example value
+... ... workLog :: no description value
+... ... incident :: no example value
+... ... incident :: no description value
+... ... changeRequestSpecification :: no example value
+... ... changeRequestSpecification :: no description value
+... ... impactEntity :: no example value
+... ... impactEntity :: no description value
+... ... changeRequestCharacteristic :: no example value
+... ... changeRequestCharacteristic :: no description value
+... ... targetEntity :: no example value
+... ... targetEntity :: no description value
+... ... relatedParty :: no example value
+... ... resolution :: no example value
+... ... resolution :: no description value
+... ... sla :: no example value
+... ... sla :: no description value
+... ... relateChangeRequest :: no example value
+... ... relateChangeRequest :: no description value
+... ... category :: no example value
+... ... category :: no description value
+... ... note :: no example value
+... ... note :: no description value
+... ... location :: no example value
+
+... ./Common/ChangeRequestCharacteristic.schema.json
+... ... value :: no example value
+
+... ./Common/ChangeRequestSpecification.schema.json
+... ... description :: no example value
+... ... validFor :: no example value
+... ... validFor :: no description value
+
+... ./Common/Characteristic.schema.json
+... ... value :: no example value
+
+... ./Common/CommunicationMessage.schema.json
+... ... callbackFlag :: no example value
+... ... callbackFlag :: no description value
+... ... content :: no example value
+... ... description :: no example value
+... ... logFlag :: no example value
+... ... logFlag :: no description value
+... ... priority :: no example value
+... ... sendTime :: no example value
+... ... sendTimeComplete :: no example value
+... ... status :: no example value
+... ... subject :: no example value
+... ... tryTimes :: no example value
+... ... tryTimes :: no description value
+... ... tryTimes :: recommend to add format
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... attachment :: no example value
+... ... attachment :: no description value
+... ... receiver :: no example value
+... ... receiver :: no description value
+... ... sender :: no example value
+... ... sender :: no description value
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+
+... ./Common/CommunicationRequestCharacteristic.schema.json
+... ... value :: no example value
+
+... ./Common/ConstraintRef.schema.json
+... ... version :: no example value
+... ... @referredType :: no example value
+
+... ./Common/ContactMedium.schema.json
+... ... preferred :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+
+... ./Common/Document.schema.json
+... ... creationDate :: no example value
+... ... description :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleState :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... version :: no example value
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... documentSpecification :: no example value
+... ... documentSpecification :: no description value
+... ... binaryAttachment :: no example value
+... ... binaryAttachment :: no description value
+... ... category :: no example value
+... ... category :: no description value
+... ... documentRelationship :: no example value
+... ... documentRelationship :: no description value
+... ... relatedObject :: no example value
+... ... relatedObject :: no description value
+
+... ./Common/DocumentAttachment.schema.json
+... ... description :: no example value
+... ... mimeType :: no example value
+... ... size :: no example value
+... ... sizeUnit :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... URL :: no example value
+... ... URL :: recommend to add format
+... ... validFor :: no example value
+
+... ./Common/DocumentCharacteristic.schema.json
+... ... value :: no example value
+... ... value :: no description value
+
+... ./Common/DocumentRef.schema.json
+... ... @referredType :: no example value
+
+... ./Common/DocumentRelationship.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... documentRef :: no example value
+... ... documentRef :: no description value
+
+... ./Common/DocumentSpecification.schema.json
+... ... URL :: no example value
+... ... URL :: recommend to add format
+... ... version :: no example value
+
+... ./Common/EntityAttachment.schema.json
+... ... description :: no example value
+... ... mimeType :: no example value
+... ... uri :: no example value
+... ... uri :: recommend to add format
+... ... validFor :: no example value
+
+... ./Common/EntityCatalog.schema.json
+... ... description :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+
+... ./Common/EntityCatalogItem.schema.json
+... ... description :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+
+... ./Common/EntityCatalogItemRef.schema.json
+... ... version :: no example value
+... ... @referredType :: no example value
+
+... ./Common/EntityCategory.schema.json
+... ... description :: no example value
+... ... isRoot :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... parentId :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+
+... ./Common/EntitySchemaRef.schema.json
+... ... @referredType :: no example value
+
+... ./Common/EntitySpecRelationship.schema.json
+... ... role :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+... ... associationSpec :: no example value
+... ... associationSpec :: no description value
+
+... ./Common/EntitySpecification.schema.json
+... ... description :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+... ... attachment :: no example value
+... ... attachment :: no description value
+... ... entitySchema :: no example value
+... ... entitySchema :: no description value
+... ... specCharacteristic :: no example value
+... ... specCharacteristic :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+
+... ./Common/EntitySpecificationRef.schema.json
+... ... version :: no example value
+... ... @referredType :: no example value
+
+... ./Common/Error.schema.json
+... ... code :: no example value
+... ... reason :: no example value
+... ... message :: no example value
+... ... status :: no example value
+... ... referenceError :: no example value
+
+... ./Common/ExportJob.schema.json
+... ... completionDate :: no example value
+... ... contentType :: no example value
+... ... creationDate :: no example value
+... ... errorLog :: no example value
+... ... path :: no example value
+... ... query :: no example value
+... ... status :: no example value
+... ... url :: no example value
+... ... url :: recommend to add format
+
+... ./Common/ExternalReference.schema.json
+... ... ExternalReference :: should be renamed as ExternalReferenceRef if this is a reference entity
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+
+... ./Common/FileDocument.schema.json
+... ... downloadUrl :: no example value
+... ... downloadUrl :: recommend to add format
+... ... fileType :: no example value
+... ... size :: no example value
+... ... sizeUnit :: no example value
+
+... ./Common/GeographicAddress.schema.json
+... ... city :: no example value
+... ... country :: no example value
+... ... locality :: no example value
+... ... postcode :: no example value
+... ... stateOrProvince :: no example value
+... ... streetName :: no example value
+... ... streetNr :: no example value
+... ... streetNrLast :: no example value
+... ... streetNrLastSuffix :: no example value
+... ... streetNrSuffix :: no example value
+... ... streetSuffix :: no example value
+... ... streetType :: no example value
+... ... geographicLocation :: no example value
+... ... geographicLocation :: no description value
+... ... geographicSubAddress :: no example value
+... ... geographicSubAddress :: no description value
+
+... ./Common/GeographicAddressRef.schema.json
+... ... @referredType :: no example value
+
+... ./Common/GeographicAddressValidation.schema.json
+... ... provideAlternative :: no example value
+... ... status :: no example value
+... ... validationDate :: no example value
+... ... validationResult :: no example value
+... ... validAddress :: no example value
+... ... validAddress :: no description value
+... ... alternateGeographicAddress :: no example value
+... ... alternateGeographicAddress :: no description value
+
+... ./Common/GeographicLocation.schema.json
+... ... accuracy :: no example value
+... ... accuracy :: no description value
+... ... geometryType :: no example value
+... ... spatialRef :: no example value
+... ... spatialRef :: no description value
+... ... geometry :: no example value
+... ... geometry :: no description value
+
+... ./Common/GeographicLocationRef.schema.json
+... ... @referredType :: no example value
+
+... ./Common/GeographicPlace.schema.json
+... ... GeographicPlace :: no properties defined
+
+... ./Common/GeographicPoint.schema.json
+... ... x :: no example value
+... ... y :: no example value
+... ... z :: no example value
+
+... ./Common/GeographicSite.schema.json
+... ... code :: no example value
+... ... description :: no example value
+... ... status :: no example value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... calendar :: no example value
+... ... calendar :: no description value
+... ... geographicLocation :: no example value
+... ... geographicLocation :: no description value
+... ... address :: no example value
+... ... address :: no description value
+... ... siteRelationship :: no example value
+... ... siteRelationship :: no description value
+
+... ./Common/GeographicSiteRef.schema.json
+... ... @referredType :: no example value
+
+... ./Common/GeographicSubAddress.schema.json
+... ... buildingName :: no example value
+... ... levelNumber :: no example value
+... ... levelType :: no example value
+... ... privateStreetName :: no example value
+... ... privateStreetNumber :: no example value
+... ... subUnitNumber :: no example value
+... ... subUnitType :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+
+... ./Common/HourPeriod.schema.json
+... ... endHour :: no example value
+... ... startHour :: no example value
+
+... ./Common/Hub.schema.json
+... ... callback :: no example value
+... ... query :: no example value
+
+... ./Common/ImpactEntityRef.schema.json
+... ... description :: no example value
+... ... @referredType :: no example value
+
+... ./Common/ImportJob.schema.json
+... ... completionDate :: no example value
+... ... contentType :: no example value
+... ... creationDate :: no example value
+... ... errorLog :: no example value
+... ... path :: no example value
+... ... status :: no example value
+... ... url :: no example value
+... ... url :: recommend to add format
+
+... ./Common/Incident.schema.json
+... ... Incident :: should be renamed as IncidentRef if this is a reference entity
+... ... description :: no example value
+
+... ./Common/LocationCharacteristic.schema.json
+... ... value :: no example value
+... ... value :: no description value
+
+... ./Common/MediumCharacteristic.schema.json
+... ... city :: no example value
+... ... country :: no example value
+... ... emailAddress :: no example value
+... ... faxNumber :: no example value
+... ... phoneNumber :: no example value
+... ... postCode :: no example value
+... ... stateOrProvince :: no example value
+... ... street1 :: no example value
+... ... street2 :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+
+... ./Common/Money.schema.json
+... ... unit :: no example value
+... ... value :: no example value
+
+... ./Common/Note.schema.json
+... ... author :: no example value
+... ... date :: no example value
+... ... text :: no example value
+
+... ./Common/Notification.schema.json
+... ... eventId :: no example value
+... ... eventTime :: no example value
+... ... eventType :: no example value
+... ... fieldPath :: no example value
+... ... resourcePath :: no example value
+
+... ./Common/Object.schema.json
+... ... type :: no example value
+... ... type :: no description value
+... ... type :: rename to avoid conflict with @type
+... ... uri :: no example value
+... ... uri :: no description value
+... ... uri :: recommend to add format
+
+... ./Common/Place.schema.json
+... ... Place :: should be renamed as PlaceRef if this is a reference entity
+... ... role :: no example value
+
+... ./Common/Quantity.schema.json
+... ... amount :: no example value
+... ... amount :: no description value
+... ... units :: no example value
+... ... units :: no description value
+
+... ./Common/RatedProductUsage.schema.json
+... ... bucketValueConvertedInAmount :: no example value
+... ... currencyCode :: no example value
+... ... isBilled :: no example value
+... ... isTaxExempt :: no example value
+... ... offerTariffType :: no example value
+... ... productRef :: no example value
+... ... ratingAmountType :: no example value
+... ... ratingDate :: no example value
+... ... taxExcludedRatingAmount :: no example value
+... ... taxIncludedRatingAmount :: no example value
+... ... taxRate :: no example value
+... ... usageRatingTag :: no example value
+
+... ./Common/Receiver.schema.json
+... ... appUserId :: no example value
+... ... email :: no example value
+... ... ip :: no example value
+... ... phoneNumber :: no example value
+... ... party :: no example value
+... ... party :: no description value
+
+... ./Common/ReceiverRef.schema.json
+... ... @referredType :: no example value
+
+... ./Common/Record.schema.json
+... ... dateTime :: no example value
+... ... description :: no example value
+... ... supportPerson :: no example value
+
+... ./Common/RelatedChangeRequestRef.schema.json
+... ... correlation :: no example value
+... ... description :: no example value
+... ... @referredType :: no example value
+
+... ./Common/RelatedEntityRef.schema.json
+... ... herf :: no example value
+... ... @referredType :: no example value
+
+... ./Common/RelatedObject.schema.json
+... ... involvement :: no example value
+... ... reference :: no example value
+
+... ./Common/Resolution.schema.json
+... ... code :: no example value
+... ... description :: no example value
+... ... task :: no example value
+... ... task :: no description value
+
+... ./Common/RetrieveGeographicLocation.schema.json
+... ... requestedAccuracy :: no example value
+... ... requestedAccuracy :: no description value
+... ... status :: no example value
+... ... status :: no description value
+... ... time :: no example value
+... ... time :: no description value
+... ... geographicLocation :: no example value
+... ... geographicLocation :: no description value
+... ... thing :: no example value
+... ... thing :: no description value
+
+... ./Common/RetrieveLocationRelation.schema.json
+... ... distance :: no example value
+... ... distance :: no description value
+... ... status :: no example value
+... ... status :: no description value
+... ... time :: no example value
+... ... time :: no description value
+... ... intersection :: no example value
+... ... intersection :: no description value
+... ... location :: no example value
+... ... location :: no description value
+
+... ./Common/Sender.schema.json
+... ... email :: no example value
+... ... phoneNumber :: no example value
+... ... party :: no example value
+... ... party :: no description value
+
+... ./Common/SiteRelationship.schema.json
+... ... role :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+
+... ./Common/SpecCharRelationship.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+
+... ./Common/SpecCharacteristic.schema.json
+... ... configurable :: no example value
+... ... description :: no example value
+... ... validFor :: no example value
+... ... valueType :: no example value
+... ... specCharacteristicValue :: no example value
+... ... specCharacteristicValue :: no description value
+... ... specCharRelationship :: no example value
+... ... specCharRelationship :: no description value
+
+... ./Common/SpecCharacteristicValue.schema.json
+... ... isDefault :: no example value
+... ... rangeInterval :: no example value
+... ... regex :: no example value
+... ... unitOfMeasure :: no example value
+... ... validFor :: no example value
+... ... value :: no example value
+... ... valueFrom :: no example value
+... ... valueTo :: no example value
+... ... valueType :: no example value
+
+... ./Common/Street.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+... ... address :: no example value
+... ... address :: no description value
+
+... ./Common/StreetSegment.schema.json
+... ... number :: no example value
+... ... numberLast :: no example value
+... ... numberLastSuffix :: no example value
+... ... numberSuffix :: no example value
+... ... address :: no example value
+... ... address :: no description value
+
+... ./Common/SubAddress.schema.json
+... ... buildingName :: no example value
+... ... levelNumber :: no example value
+... ... levelType :: no example value
+... ... privateStreetName :: no example value
+... ... privateStreetNumber :: no example value
+... ... subUnitNumber :: no example value
+... ... subUnitType :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+
+... ./Common/TargetEntityRef.schema.json
+... ... description :: no example value
+... ... @referredType :: no example value
+
+... ./Common/Task.schema.json
+... ... description :: no example value
+... ... state :: no example value
+
+... ./Common/Ticket.schema.json
+... ... correlationId :: no example value
+... ... creationDate :: no example value
+... ... description :: no example value
+... ... resolutionDate :: no example value
+... ... severity :: no example value
+... ... status :: no example value
+... ... statusChangeDate :: no example value
+... ... statusChangeReason :: no example value
+... ... subStatus :: no example value
+... ... targetResolutionDate :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... relatedObject :: no example value
+... ... relatedObject :: no description value
+... ... note :: no example value
+... ... note :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+
+... ./Common/TimePeriod.schema.json
+... ... startDateTime :: no example value
+... ... endDateTime :: no example value
+
+... ./Common/Usage.schema.json
+... ... date :: no example value
+... ... description :: no example value
+... ... status :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... usageSpecification :: no example value
+... ... usageSpecification :: no description value
+... ... usageCharacteristic :: no example value
+... ... usageCharacteristic :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... ratedProductUsage :: no example value
+... ... ratedProductUsage :: no description value
+
+... ./Common/UsageCharacteristic.schema.json
+... ... value :: no example value
+
+... ./Common/UsageSpecCharacteristic.schema.json
+... ... configurable :: no example value
+... ... description :: no example value
+... ... usageSpecCharacteristicValue :: no example value
+... ... usageSpecCharacteristicValue :: no description value
+
+... ./Common/UsageSpecCharacteristicValue.schema.json
+... ... default :: no example value
+... ... value :: no example value
+... ... valueFrom :: no example value
+... ... valueTo :: no example value
+... ... valueType :: no example value
+
+... ./Common/UsageSpecification.schema.json
+... ... description :: no example value
+... ... validFor :: no example value
+... ... usageSpecCharacteristic :: no example value
+... ... usageSpecCharacteristic :: no description value
+
+... ./Common/UsageSpecificationRef.schema.json
+... ... @referredType :: no example value
+
+... ./Common/Value.schema.json
+... ... Value :: no properties defined
+
+... ./Common/WorkLog.schema.json
+... ... creatDateTime :: no example value
+... ... description :: no example value
+... ... lastUpdateDateTime :: no example value
+... ... lastUpdateDateTime :: recommend to add format
+... ... lastUpdateDateTime :: recommend to add format
+... ... record :: no example value
+... ... record :: no description value
+
+... ./Customer/AppliedBillingRate.schema.json
+... ... date :: no example value
+... ... description :: no example value
+... ... taxExcludedAmount :: no example value
+... ... taxIncludedAmount :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... appliedTax :: no example value
+... ... appliedTax :: no description value
+... ... bill :: no example value
+... ... bill :: no description value
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+
+... ./Customer/AppliedBillingRateCharacteristic.schema.json
+... ... value :: no example value
+
+... ./Customer/AppliedBillingTaxRate.schema.json
+... ... taxAmount :: no example value
+... ... taxCategory :: no example value
+... ... taxRate :: no example value
+
+... ./Customer/AppliedConsequence.schema.json
+... ... appliedAction :: no example value
+... ... description :: no example value
+... ... repeatAction :: no example value
+
+... ./Customer/AppliedCustomerBillingRate.schema.json
+... ... AppliedCustomerBillingRate :: no properties defined
+
+... ./Customer/AppliedPartyBillingRate.schema.json
+... ... AppliedPartyBillingRate :: no properties defined
+
+... ./Customer/AppointmentRef.schema.json
+... ... description :: no example value
+... ... @referredType :: no example value
+
+... ./Customer/Authorization.schema.json
+... ... authorizationGivenDate :: no example value
+... ... authorizationGivenDate :: recommend to add format
+... ... authorizationName :: no example value
+... ... authorizationRequestedDate :: no example value
+... ... authorizationRequestedDate :: recommend to add format
+... ... authorizationSignatureRepresentation :: no example value
+... ... authorizationState :: no example value
+... ... approver :: no example value
+... ... approver :: no description value
+
+... ./Customer/BalanceDeduct.schema.json
+... ... confirmationDate :: no example value
+... ... description :: no example value
+... ... requestedDate :: no example value
+... ... status :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... product :: no example value
+... ... product :: no description value
+... ... balanceReserve :: no example value
+... ... balanceReserve :: no description value
+... ... requestor :: no example value
+... ... requestor :: no description value
+... ... partyAccount :: no example value
+... ... partyAccount :: no description value
+
+... ./Customer/BalanceDeductRef.schema.json
+... ... @referredType :: no example value
+
+... ./Customer/BalanceDeductRollback.schema.json
+... ... description :: no example value
+... ... requestedDate :: no example value
+... ... status :: no example value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... product :: no example value
+... ... product :: no description value
+... ... partyAccount :: no example value
+... ... partyAccount :: no description value
+... ... balanceDeduct :: no example value
+... ... balanceDeduct :: no description value
+... ... requestor :: no example value
+... ... requestor :: no description value
+
+... ./Customer/BalanceReserve.schema.json
+... ... confirmationDate :: no example value
+... ... description :: no example value
+... ... isAutoDeduct :: no example value
+... ... remainedAmount :: no example value
+... ... requestedDate :: no example value
+... ... reservedAmount :: no example value
+... ... status :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+... ... requestor :: no example value
+... ... requestor :: no description value
+... ... product :: no example value
+... ... product :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... partyAccount :: no example value
+... ... partyAccount :: no description value
+
+... ./Customer/BalanceReserveRef.schema.json
+... ... @referredType :: no example value
+
+... ./Customer/BalanceUnreserve.schema.json
+... ... description :: no example value
+... ... requestedDate :: no example value
+... ... status :: no example value
+... ... balanceReserve :: no example value
+... ... balanceReserve :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... requestor :: no example value
+... ... requestor :: no description value
+... ... product :: no example value
+... ... product :: no description value
+
+... ./Customer/BankCardDetails.schema.json
+... ... bank :: no example value
+... ... brand :: no example value
+... ... cardNumber :: no example value
+... ... cvv :: no example value
+... ... expirationDate :: no example value
+... ... lastFourDiguts :: no example value
+... ... nameOnCard :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+
+... ./Customer/BankCardMethod.schema.json
+... ... BankCardMethod :: should be renamed as BankCardMethodRef if this is a reference entity
+... ... details :: no example value
+... ... details :: no description value
+
+... ./Customer/Bill.schema.json
+... ... amountDue :: no example value
+... ... billDate :: no example value
+... ... billingPeriod :: no example value
+... ... billNo :: no example value
+... ... category :: no example value
+... ... lastUpdate :: no example value
+... ... nextBillDate :: no example value
+... ... paymentDueDate :: no example value
+... ... remainingAmount :: no example value
+... ... runType :: no example value
+... ... state :: no example value
+... ... taxExcludedAmount :: no example value
+... ... taxIncludedAmount :: no example value
+... ... billDocument :: no example value
+... ... paymentItem :: no example value
+... ... billingAccount :: no example value
+... ... billingAccount :: no description value
+... ... taxItem :: no example value
+... ... taxItem :: no description value
+... ... paymentMethod :: no example value
+... ... paymentMethod :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... financialAccount :: no example value
+... ... financialAccount :: no description value
+
+... ./Customer/BillFormat.schema.json
+... ... BillFormat :: should be renamed as BillFormatRef if this is a reference entity
+... ... description :: no example value
+
+... ./Customer/BillFormatRef.schema.json
+... ... @referredType :: no example value
+
+... ./Customer/BillPresentationMedia.schema.json
+... ... BillPresentationMedia :: should be renamed as BillPresentationMediaRef if this is a reference entity
+... ... description :: no example value
+
+... ./Customer/BillPresentationMediaRef.schema.json
+... ... @referredType :: no example value
+
+... ./Customer/BillRef.schema.json
+... ... @referredType :: no example value
+
+... ./Customer/BillStructure.schema.json
+... ... presentationMedia :: no example value
+... ... presentationMedia :: no description value
+... ... format :: no example value
+... ... format :: no description value
+... ... cycleSpecification :: no example value
+... ... cycleSpecification :: no description value
+
+... ./Customer/BillingAccount.schema.json
+... ... BillingAccount :: no properties defined
+
+... ./Customer/BillingAccountRef.schema.json
+... ... @referredType :: no example value
+
+... ./Customer/BillingCycleSpecification.schema.json
+... ... billingDateShift :: no example value
+... ... billingDateShift :: recommend to add format
+... ... billingPeriod :: no example value
+... ... chargeDateOffset :: no example value
+... ... chargeDateOffset :: recommend to add format
+... ... creditDateOffset :: no example value
+... ... creditDateOffset :: recommend to add format
+... ... description :: no example value
+... ... frequency :: no example value
+... ... mailingDateOffset :: no example value
+... ... mailingDateOffset :: recommend to add format
+... ... paymentDueDateOffset :: no example value
+... ... paymentDueDateOffset :: recommend to add format
+... ... validFor :: no example value
+
+... ./Customer/BillingCycleSpecificationRef.schema.json
+... ... dateShift :: no example value
+... ... dateShift :: recommend to add format
+... ... frequency :: no example value
+... ... @referredType :: no example value
+
+... ./Customer/CartItem.schema.json
+... ... action :: no example value
+... ... quantity :: no example value
+... ... status :: no example value
+... ... cartTerm :: no example value
+... ... cartTerm :: no description value
+... ... cartItem :: no example value
+... ... cartItem :: no description value
+... ... note :: no example value
+... ... note :: no description value
+... ... totalItemPrice :: no example value
+... ... totalItemPrice :: no description value
+... ... product :: no example value
+... ... product :: no description value
+... ... itemPrice :: no example value
+... ... itemPrice :: no description value
+... ... productOffering :: no example value
+... ... productOffering :: no description value
+... ... cartItemRelationship :: no example value
+... ... cartItemRelationship :: no description value
+
+... ./Customer/CartItemRef.schema.json
+... ... @referredType :: no example value
+
+... ./Customer/CartItemRelationship.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... cartItem :: no example value
+... ... cartItem :: no description value
+
+... ./Customer/CartPrice.schema.json
+... ... description :: no example value
+... ... priceType :: no example value
+... ... recurringChargePeriod :: no example value
+... ... unitOfMeasure :: no example value
+... ... price :: no example value
+... ... price :: no description value
+... ... priceAlteration :: no example value
+... ... priceAlteration :: no description value
+
+... ./Customer/CartTerm.schema.json
+... ... description :: no example value
+... ... description :: no description value
+... ... duration :: no example value
+... ... duration :: no description value
+
+... ./Customer/CashDetails.schema.json
+... ... CashDetails :: no properties defined
+
+... ./Customer/CashMethod.schema.json
+... ... CashMethod :: should be renamed as CashMethodRef if this is a reference entity
+... ... details :: no example value
+... ... details :: no description value
+
+... ./Customer/Category.schema.json
+... ... description :: no example value
+... ... isRoot :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... parentId :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+
+... ./Customer/CategoryRef.schema.json
+... ... @referredType :: no example value
+
+... ./Customer/Channel.schema.json
+... ... Channel :: should be renamed as ChannelRef if this is a reference entity
+... ... role :: no example value
+
+... ./Customer/ChannelRef.schema.json
+... ... @referredType :: no example value
+
+... ./Customer/CheckDetails.schema.json
+... ... bank :: no example value
+... ... code :: no example value
+... ... date :: no example value
+... ... drawer :: no example value
+... ... payee :: no example value
+
+... ./Customer/CheckMethod.schema.json
+... ... CheckMethod :: should be renamed as CheckMethodRef if this is a reference entity
+... ... details :: no example value
+... ... details :: no description value
+
+... ./Customer/CreditProfile.schema.json
+... ... creditProfileDate :: no example value
+... ... creditRiskRating :: no example value
+... ... creditScore :: no example value
+... ... validFor :: no example value
+
+... ./Customer/Customer.schema.json
+... ... Customer :: no properties defined
+
+... ./Customer/CustomerBill.schema.json
+... ... CustomerBill :: no properties defined
+
+... ./Customer/DigitalWalletDetails.schema.json
+... ... service :: no example value
+... ... walletId :: no example value
+... ... walletUrl :: no example value
+... ... walletUrl :: recommend to add format
+
+... ./Customer/DigitalWalletMethod.schema.json
+... ... DigitalWalletMethod :: should be renamed as DigitalWalletMethodRef if this is a reference entity
+... ... details :: no example value
+... ... details :: no description value
+
+... ./Customer/Disability.schema.json
+... ... Disability :: should be renamed as DisabilityRef if this is a reference entity
+... ... disability :: no example value
+
+... ./Customer/EligibilityUnavailabilityReason.schema.json
+... ... code :: no example value
+... ... label :: no example value
+
+... ./Customer/OrderItem.schema.json
+... ... action :: no example value
+... ... quantity :: no example value
+... ... state :: no example value
+... ... appointment :: no example value
+... ... appointment :: no description value
+... ... billingAccount :: no example value
+... ... billingAccount :: no description value
+... ... itemPrice :: no example value
+... ... itemPrice :: no description value
+... ... orderItem :: no example value
+... ... orderItem :: no description value
+... ... orderItemRelationship :: no example value
+... ... orderItemRelationship :: no description value
+... ... itemTotalPrice :: no example value
+... ... itemTotalPrice :: no description value
+... ... payment :: no example value
+... ... payment :: no description value
+... ... productOffering :: no example value
+... ... productOffering :: no description value
+... ... product :: no example value
+... ... product :: no description value
+... ... qualification :: no example value
+... ... qualification :: no description value
+... ... itemTerm :: no example value
+... ... itemTerm :: no description value
+
+... ./Customer/OrderItemRelationship.schema.json
+... ... OrderItemRelationship :: should be renamed as OrderItemRelationshipRef if this is a reference entity
+... ... type :: no example value
+... ... type :: no description value
+... ... type :: rename to avoid conflict with @type
+
+... ./Customer/OrderPrice.schema.json
+... ... description :: no example value
+... ... priceType :: no example value
+... ... recurringChargePeriod :: no example value
+... ... unitOfMeasure :: no example value
+... ... billingAccount :: no example value
+... ... billingAccount :: no description value
+... ... price :: no example value
+... ... price :: no description value
+... ... priceAlteration :: no example value
+... ... priceAlteration :: no description value
+
+... ./Customer/OrderRelationship.schema.json
+... ... OrderRelationship :: should be renamed as OrderRelationshipRef if this is a reference entity
+... ... type :: no example value
+... ... type :: no description value
+... ... type :: rename to avoid conflict with @type
+
+... ./Customer/OrderTerm.schema.json
+... ... description :: no example value
+... ... duration :: no example value
+
+... ./Customer/Price.schema.json
+... ... dutyFreeAmount :: no example value
+... ... percentage :: no example value
+... ... taxIncludedAmount :: no example value
+... ... taxRate :: no example value
+
+... ./Customer/PriceAlteration.schema.json
+... ... applicationDuration :: no example value
+... ... description :: no example value
+... ... priceType :: no example value
+... ... priority :: no example value
+... ... recurringChargePeriod :: no example value
+... ... unitOfMeasure :: no example value
+... ... price :: no example value
+... ... price :: no description value
+
+... ./Customer/Quote.schema.json
+... ... category :: no example value
+... ... description :: no example value
+... ... effectiveQuoteCompletionDate :: no example value
+... ... expectedFulfillmentStartDate :: no example value
+... ... expectedFulfillmentStartDate :: recommend to add format
+... ... expectedQuoteCompletionDate :: no example value
+... ... expectedQuoteCompletionDate :: recommend to add format
+... ... externalId :: no example value
+... ... quoteDate :: no example value
+... ... state :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+... ... note :: no example value
+... ... note :: no description value
+... ... billingAccount :: no example value
+... ... billingAccount :: no description value
+... ... agreement :: no example value
+... ... agreement :: no description value
+... ... quoteAuthorization :: no example value
+... ... quoteAuthorization :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... contactMedium :: no example value
+... ... contactMedium :: no description value
+... ... quoteItem :: no example value
+... ... quoteItem :: no description value
+... ... quoteTotalPrice :: no example value
+... ... quoteTotalPrice :: no description value
+
+... ./Customer/QuoteItem.schema.json
+... ... action :: no example value
+... ... quantity :: no example value
+... ... state :: no example value
+... ... quoteItem :: no example value
+... ... quoteItem :: no description value
+... ... quoteItemRelationship :: no example value
+... ... quoteItemRelationship :: no description value
+... ... attachment :: no example value
+... ... attachment :: no description value
+... ... quoteItemAuthorization :: no example value
+... ... quoteItemAuthorization :: no description value
+... ... note :: no example value
+... ... note :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... appointment :: no example value
+... ... appointment :: no description value
+... ... productOffering :: no example value
+... ... productOffering :: no description value
+... ... quoteItemPrice :: no example value
+... ... quoteItemPrice :: no description value
+... ... product :: no example value
+... ... product :: no description value
+
+... ./Customer/QuoteItemRelationship.schema.json
+... ... QuoteItemRelationship :: should be renamed as QuoteItemRelationshipRef if this is a reference entity
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+
+... ./Customer/QuotePrice.schema.json
+... ... description :: no example value
+... ... priceType :: no example value
+... ... recurringChargePeriod :: no example value
+... ... unitOfMeasure :: no example value
+... ... priceAlteration :: no example value
+... ... priceAlteration :: no description value
+... ... price :: no example value
+... ... price :: no description value
+
+... ./Customer/SettlementMethod.schema.json
+... ... code :: no example value
+... ... label :: no example value
+
+... ./Customer/SettlementNoteAdvice.schema.json
+... ... currencyCode :: no example value
+... ... date :: no example value
+... ... description :: no example value
+... ... issuerTaxRegistration :: no example value
+... ... paymentDueDate :: no example value
+... ... receiverTaxRegistration :: no example value
+... ... taxDate :: no example value
+... ... taxExcludedAmount :: no example value
+... ... taxIncludedAmount :: no example value
+... ... settlementMethod :: no example value
+... ... settlementMethod :: no description value
+... ... settlementNoteImage :: no example value
+... ... settlementNoteImage :: no description value
+... ... receiver :: no example value
+... ... receiver :: no description value
+... ... taxItem :: no example value
+... ... taxItem :: no description value
+... ... issuer :: no example value
+... ... issuer :: no description value
+... ... settlementNoteItem :: no example value
+... ... settlementNoteItem :: no description value
+
+... ./Customer/SettlementNoteImage.schema.json
+... ... imageFileName :: no example value
+... ... imageFileURL :: no example value
+... ... imageFileURL :: recommend to add format
+... ... imageFormat :: no example value
+... ... imageSize :: no example value
+
+... ./Customer/SettlementNoteItem.schema.json
+... ... itemId :: no example value
+... ... itemLabel :: no example value
+... ... itemNumber :: no example value
+... ... period :: no example value
+... ... period :: no description value
+... ... quantity :: no example value
+... ... taxExcludedAmount :: no example value
+... ... taxExcludedUnitPrice :: no example value
+... ... taxIncludedAmount :: no example value
+... ... taxItem :: no example value
+... ... taxItem :: no description value
+
+... ./Customer/ShoppingCart.schema.json
+... ... validFor :: no example value
+... ... contactMedium :: no example value
+... ... contactMedium :: no description value
+... ... cartTotalPrice :: no example value
+... ... cartItem :: no example value
+... ... cartItem :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+
+... ./Customer/ShoppingCartRef.schema.json
+... ... @referredType :: no example value
+
+... ./Customer/TaxItem.schema.json
+... ... taxAmount :: no example value
+... ... taxCategory :: no example value
+... ... taxRate :: no example value
+
+... ./Customer/TerminationError.schema.json
+... ... value :: no example value
+
+... ./Customer/TokenizedCardDetails.schema.json
+... ... brand :: no example value
+... ... issuer :: no example value
+... ... lastFourDigits :: no example value
+... ... token :: no example value
+... ... tokenType :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+
+... ./Customer/TokenizedCardMethod.schema.json
+... ... TokenizedCardMethod :: should be renamed as TokenizedCardMethodRef if this is a reference entity
+... ... details :: no example value
+... ... details :: no description value
+
+... ./Customer/VoucherDetails.schema.json
+... ... campaign :: no example value
+... ... code :: no example value
+... ... expirationDate :: no example value
+... ... value :: no example value
+
+... ./Customer/VoucherMethod.schema.json
+... ... VoucherMethod :: should be renamed as VoucherMethodRef if this is a reference entity
+... ... details :: no example value
+... ... details :: no description value
+
+... ./EngagedParty/Account.schema.json
+... ... creditLimit :: no example value
+... ... description :: no example value
+... ... lastModified :: no example value
+... ... state :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... taxExemption :: no example value
+... ... taxExemption :: no description value
+... ... contact :: no example value
+... ... contact :: no description value
+... ... accountBalance :: no example value
+... ... accountBalance :: no description value
+... ... accountRelationship :: no example value
+... ... accountRelationship :: no description value
+
+... ./EngagedParty/AccountBalance.schema.json
+... ... amount :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+
+... ./EngagedParty/AccountBalanceRef.schema.json
+... ... amount :: no example value
+... ... status :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... @referredType :: no example value
+
+... ./EngagedParty/AccountDirectDetails.schema.json
+... ... AccountDirectDetails :: should be renamed as AccountDirectDetailsRef if this is a reference entity
+... ... account :: no example value
+... ... account :: no description value
+
+... ./EngagedParty/AccountDirectMethod.schema.json
+... ... AccountDirectMethod :: should be renamed as AccountDirectMethodRef if this is a reference entity
+... ... dertails :: no example value
+... ... dertails :: no description value
+
+... ./EngagedParty/AccountRef.schema.json
+... ... description :: no example value
+... ... @referredType :: no example value
+
+... ./EngagedParty/AccountRelationship.schema.json
+... ... relationshipType :: no example value
+... ... validFor :: no example value
+... ... account :: no example value
+... ... account :: no description value
+
+... ./EngagedParty/AccountTaxExemption.schema.json
+... ... certificateNumber :: no example value
+... ... issuingJurisdiction :: no example value
+... ... issuingJurisdiction :: recommend to add format
+... ... reason :: no example value
+... ... validFor :: no example value
+
+... ./EngagedParty/Agreement.schema.json
+... ... agreementPeriod :: no example value
+... ... completionDate :: no example value
+... ... completionDate :: recommend to add format
+... ... description :: no example value
+... ... documentNumber :: no example value
+... ... initialDate :: no example value
+... ... statementOfIntent :: no example value
+... ... status :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... version :: no example value
+... ... agreementSpecification :: no example value
+... ... agreementSpecification :: no description value
+... ... agreementItem :: no example value
+... ... agreementItem :: no description value
+... ... engagedPartyRole :: no example value
+... ... engagedPartyRole :: no description value
+... ... agreementAuthorization :: no example value
+... ... agreementAuthorization :: no description value
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+... ... associatedAgreement :: no example value
+... ... associatedAgreement :: no description value
+
+... ./EngagedParty/AgreementAttachment.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... url :: no example value
+... ... url :: recommend to add format
+
+... ./EngagedParty/AgreementAuthorization.schema.json
+... ... date :: no example value
+... ... signatureRepresentation :: no example value
+... ... state :: no example value
+
+... ./EngagedParty/AgreementItem.schema.json
+... ... productOffering :: no example value
+... ... productOffering :: no description value
+... ... termOrCondition :: no example value
+... ... termOrCondition :: no description value
+
+... ./EngagedParty/AgreementRef.schema.json
+... ... @referredType :: no example value
+
+... ./EngagedParty/AgreementSpecCharacteristic.schema.json
+... ... configurable :: no example value
+... ... description :: no example value
+... ... validFor :: no example value
+... ... valueType :: no example value
+... ... specCharacteristicValue :: no example value
+... ... specCharacteristicValue :: no description value
+
+... ./EngagedParty/AgreementSpecCharacteristicValue.schema.json
+... ... default :: no example value
+... ... unitOfMeasure :: no example value
+... ... validFor :: no example value
+... ... value :: no example value
+... ... valueFrom :: no example value
+... ... valueTo :: no example value
+... ... valueType :: no example value
+
+... ./EngagedParty/AgreementSpecification.schema.json
+... ... description :: no example value
+... ... isBundle :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+... ... serviceCategory :: no example value
+... ... serviceCategory :: no description value
+... ... specCharacteristic :: no example value
+... ... specCharacteristic :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... attachment :: no example value
+... ... attachment :: no description value
+... ... specificationRelationship :: no example value
+... ... specificationRelationship :: no description value
+
+... ./EngagedParty/AgreementSpecificationRef.schema.json
+... ... description :: no example value
+... ... @referredType :: no example value
+
+... ./EngagedParty/AgreementSpecificationRelationship.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+
+... ./EngagedParty/AgreementTermOrCondition.schema.json
+... ... description :: no example value
+... ... validFor :: no example value
+
+... ./EngagedParty/BankAccount.schema.json
+... ... accountHolder :: no example value
+... ... BIC :: no example value
+... ... domiciliation :: no example value
+... ... IBAN :: no example value
+
+... ./EngagedParty/BankAccountDebitDetails.schema.json
+... ... accountNumber :: no example value
+... ... accountNumberType :: no example value
+... ... BIC :: no example value
+... ... blank :: no example value
+... ... owner :: no example value
+
+... ./EngagedParty/BankAccountDebitMethod.schema.json
+... ... BankAccountDebitMethod :: should be renamed as BankAccountDebitMethodRef if this is a reference entity
+... ... details :: no example value
+... ... details :: no description value
+
+... ./EngagedParty/BankAccountTransferDetails.schema.json
+... ... accountNumber :: no example value
+... ... accountNumberType :: no example value
+... ... BIC :: no example value
+... ... blank :: no example value
+... ... owner :: no example value
+
+... ./EngagedParty/BankAccountTransferMethod.schema.json
+... ... BankAccountTransferMethod :: should be renamed as BankAccountTransferMethodRef if this is a reference entity
+... ... details :: no example value
+... ... details :: no description value
+
+... ./EngagedParty/Contact.schema.json
+... ... contactName :: no example value
+... ... contactType :: no example value
+... ... partyRoleType :: no example value
+... ... validFor :: no example value
+... ... contactMedium :: no example value
+... ... contactMedium :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+
+... ./EngagedParty/FinancialAccount.schema.json
+... ... FinancialAccount :: no properties defined
+
+... ./EngagedParty/FinancialAccountRef.schema.json
+... ... accountBalance :: no example value
+... ... accountBalance :: no description value
+... ... @referredType :: no example value
+
+... ./EngagedParty/Individual.schema.json
+... ... birthDate :: no example value
+... ... countryOfBirth :: no example value
+... ... deathDate :: no example value
+... ... familyName :: no example value
+... ... formattedName :: no example value
+... ... fullName :: no example value
+... ... gender :: no example value
+... ... givenName :: no example value
+... ... location :: no example value
+... ... maritalStatus :: no example value
+... ... middleName :: no example value
+... ... nationality :: no example value
+... ... placeOfBirth :: no example value
+... ... status :: no example value
+... ... title :: no example value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+... ... externalReference :: no example value
+... ... externalReference :: no description value
+... ... identification :: no example value
+... ... identification :: no description value
+... ... disability :: no example value
+... ... disability :: no description value
+... ... otherName :: no example value
+... ... otherName :: no description value
+... ... contactMedium :: no example value
+... ... contactMedium :: no description value
+
+... ./EngagedParty/IndividualIdentification.schema.json
+... ... identificationId :: no example value
+... ... issuingAuthority :: no example value
+... ... issuingDate :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+
+... ./EngagedParty/IssuerRef.schema.json
+... ... @referredType :: no example value
+
+... ./EngagedParty/Organization.schema.json
+... ... existsDuring :: no example value
+... ... existsDuring :: recommend to add format
+... ... isLegalEntity :: no example value
+... ... nameType :: no example value
+... ... status :: no example value
+... ... tradingName :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... otherName :: no example value
+... ... otherName :: no description value
+... ... externalReference :: no example value
+... ... externalReference :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... parentRelationship :: no example value
+... ... parentRelationship :: no description value
+... ... contactMedium :: no example value
+... ... contactMedium :: no description value
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+... ... childRelationship :: no example value
+... ... childRelationship :: no description value
+... ... identification :: no example value
+... ... identification :: no description value
+
+... ./EngagedParty/OrganizationChildRelationship.schema.json
+... ... relationshipType :: no example value
+... ... validFor :: no example value
+
+... ./EngagedParty/OrganizationIdentification.schema.json
+... ... identificationId :: no example value
+... ... issuingAuthority :: no example value
+... ... issuingDate :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+
+... ./EngagedParty/OrganizationParentRelationship.schema.json
+... ... relationshipType :: no example value
+... ... validFor :: no example value
+
+... ./EngagedParty/OtherName.schema.json
+... ... familyName :: no example value
+... ... formattedName :: no example value
+... ... fullName :: no example value
+... ... givenName :: no example value
+... ... middleName :: no example value
+... ... nameType :: no example value
+... ... title :: no example value
+... ... tradingName :: no example value
+... ... validFor :: no example value
+
+... ./EngagedParty/PartnershipType.schema.json
+... ... description :: no example value
+... ... roleType :: no example value
+... ... roleType :: no description value
+
+... ./EngagedParty/PartnershipTypeRef.schema.json
+... ... @referredType :: no example value
+
+... ./EngagedParty/Party.schema.json
+... ... Party :: no properties defined
+
+... ./EngagedParty/PartyAccount.schema.json
+... ... paymentStatus :: no example value
+... ... billStructure :: no example value
+... ... billStructure :: no description value
+... ... paymentPlan :: no example value
+... ... paymentPlan :: no description value
+... ... financialAccount :: no example value
+... ... financialAccount :: no description value
+... ... defaultPaymentMethod :: no example value
+... ... defaultPaymentMethod :: no description value
+
+... ./EngagedParty/PartyAccountRef.schema.json
+... ... description :: no example value
+... ... status :: no example value
+... ... @referredType :: no example value
+
+... ./EngagedParty/PartyBill.schema.json
+... ... PartyBill :: no properties defined
+
+... ./EngagedParty/PartyOrPartyRoleRef.schema.json
+... ... description :: no example value
+... ... @referredType :: no example value
+
+... ./EngagedParty/PartyRef.schema.json
+... ... description :: no example value
+... ... @referredType :: no example value
+
+... ./EngagedParty/PartyRole.schema.json
+... ... status :: no example value
+... ... statusReason :: no example value
+... ... validFor :: no example value
+... ... engagedParty :: no example value
+... ... engagedParty :: no description value
+... ... type :: no example value
+... ... type :: no description value
+... ... type :: rename to avoid conflict with @type
+... ... account :: no example value
+... ... account :: no description value
+... ... paymentMethod :: no example value
+... ... paymentMethod :: no description value
+... ... contactMedium :: no example value
+... ... contactMedium :: no description value
+... ... characteristic :: no example value
+... ... creditProfile :: no example value
+... ... creditProfile :: no description value
+... ... agreement :: no example value
+... ... agreement :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+
+... ./EngagedParty/PartyRoleRef.schema.json
+... ... partyId :: no example value
+... ... partyName :: no example value
+... ... @referredType :: no example value
+
+... ./EngagedParty/PaymentItem.schema.json
+... ... appliedAmount :: no example value
+... ... payment :: no example value
+... ... payment :: no description value
+
+... ./EngagedParty/PaymentMethod.schema.json
+... ... description :: no example value
+... ... preferred :: no example value
+... ... status :: no example value
+... ... status :: no description value
+... ... statusDate :: no example value
+... ... statusDate :: no description value
+... ... validFor :: no example value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... account :: no example value
+... ... account :: no description value
+
+... ./EngagedParty/PaymentMethodRef.schema.json
+... ... @referredType :: no example value
+
+... ./EngagedParty/PaymentPlan.schema.json
+... ... numberOfPayments :: no example value
+... ... paymentFrequency :: no example value
+... ... priority :: no example value
+... ... status :: no example value
+... ... totalAmount :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+... ... paymentMethod :: no example value
+... ... paymentMethod :: no description value
+
+... ./EngagedParty/PaymentRef.schema.json
+... ... @referredType :: no example value
+
+... ./EngagedParty/RelatedPartyRef.schema.json
+... ... role :: no example value
+... ... @referredType :: no example value
+
+... ./EngagedParty/RoleType.schema.json
+... ... description :: no example value
+... ... requiresBilling :: no example value
+... ... requiresSettlement :: no example value
+... ... agreementSpecification :: no example value
+... ... agreementSpecification :: no description value
+
+... ./EngagedParty/RoleTypeRef.schema.json
+... ... partnershipHref :: no example value
+... ... partnershipId :: no example value
+... ... partnershipName :: no example value
+... ... @referredType :: no example value
+
+... ./EngagedParty/Rule.schema.json
+... ... consequence :: no example value
+... ... consequence :: no description value
+... ... metric :: no example value
+... ... metric :: no description value
+... ... operator :: no example value
+... ... operator :: no description value
+... ... referenceValue :: no example value
+... ... referenceValue :: no description value
+... ... tolerance :: no example value
+... ... tolerance :: no description value
+... ... unit :: no example value
+... ... unit :: no description value
+
+... ./EngagedParty/RuleRef.schema.json
+... ... description :: no example value
+... ... description :: no description value
+... ... @referredType :: no example value
+
+... ./EngagedParty/SLA.schema.json
+... ... approvalDate :: no example value
+... ... approvalDate :: no description value
+... ... approved :: no example value
+... ... approved :: no description value
+... ... description :: no example value
+... ... state :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+... ... rule :: no example value
+... ... rule :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... template :: no example value
+... ... template :: no description value
+
+... ./EngagedParty/SLARef.schema.json
+... ... @referredType :: no example value
+
+... ./EngagedParty/SLAViolation.schema.json
+... ... date :: no example value
+... ... date :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... violation :: no example value
+... ... violation :: no description value
+... ... sla :: no example value
+... ... sla :: no description value
+
+... ./EngagedParty/SettlementAccount.schema.json
+... ... SettlementAccount :: no properties defined
+
+... ./EngagedParty/TemplateRef.schema.json
+... ... description :: no example value
+... ... description :: no description value
+... ... @referredType :: no example value
+
+... ./EngagedParty/Violation.schema.json
+... ... actualValue :: no example value
+... ... actualValue :: no description value
+... ... comment :: no example value
+... ... comment :: no description value
+... ... consequence :: no example value
+... ... consequence :: no description value
+... ... operator :: no example value
+... ... operator :: no description value
+... ... referenceValue :: no example value
+... ... referenceValue :: no description value
+... ... tolerance :: no example value
+... ... tolerance :: no description value
+... ... unit :: no example value
+... ... unit :: no description value
+... ... violationAverage :: no example value
+... ... violationAverage :: no description value
+... ... attachment :: no example value
+... ... attachment :: no description value
+... ... rule :: no example value
+... ... rule :: no description value
+
+... ./Product/AlternateProductOfferingProposal.schema.json
+... ... alternateActivationDate :: no example value
+... ... alternateProductSpecification :: no example value
+... ... alternateProductSpecification :: no description value
+... ... alternateProductOffering :: no example value
+... ... alternateProductOffering :: no description value
+
+... ./Product/BundledProductOffering.schema.json
+... ... BundledProductOffering :: should be renamed as BundledProductOfferingRef if this is a reference entity
+... ... lifecycleStatus :: no example value
+
+... ./Product/BundledProductOfferingRef.schema.json
+... ... @referredType :: no example value
+
+... ./Product/BundledProductSpecification.schema.json
+... ... BundledProductSpecification :: should be renamed as BundledProductSpecificationRef if this is a reference entity
+... ... lifecycleStatus :: no example value
+
+... ./Product/Catalog.schema.json
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+... ... version :: no example value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... category :: no example value
+... ... category :: no description value
+
+... ./Product/Product.schema.json
+... ... description :: no example value
+... ... isBundle :: no example value
+... ... isCustomerVisible :: no example value
+... ... orderDate :: no example value
+... ... productSerialNumber :: no example value
+... ... startDate :: no example value
+... ... status :: no example value
+... ... terminationDate :: no example value
+... ... realizingService :: no example value
+... ... realizingService :: no description value
+... ... billingAccount :: no example value
+... ... billingAccount :: no description value
+... ... productOffering :: no example value
+... ... productOffering :: no description value
+... ... agreement :: no example value
+... ... agreement :: no description value
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+... ... productRelationship :: no example value
+... ... productRelationship :: no description value
+... ... realizingResource :: no example value
+... ... realizingResource :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... productPrice :: no example value
+... ... productPrice :: no description value
+... ... productSpecification :: no example value
+... ... productSpecification :: no description value
+... ... place :: no example value
+... ... place :: no description value
+
+... ./Product/ProductCharacteristic.schema.json
+... ... value :: no example value
+
+... ./Product/ProductOffering.schema.json
+... ... description :: no example value
+... ... isBundle :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... statusReason :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+... ... place :: no example value
+... ... place :: no description value
+... ... serviceLevelAgreement :: no example value
+... ... serviceLevelAgreement :: no description value
+... ... productSpecification :: no example value
+... ... productSpecification :: no description value
+... ... channel :: no example value
+... ... channel :: no description value
+... ... serviceCandidate :: no example value
+... ... serviceCandidate :: no description value
+... ... serviceCandidate :: recommend to add format
+... ... category :: no example value
+... ... category :: no description value
+... ... resourceCandidate :: no example value
+... ... resourceCandidate :: no description value
+... ... resourceCandidate :: recommend to add format
+... ... productOfferingTerm :: no example value
+... ... productOfferingTerm :: no description value
+... ... productOfferingPrice :: no example value
+... ... productOfferingPrice :: no description value
+... ... agreement :: no example value
+... ... agreement :: no description value
+... ... bundledProductOffering :: no example value
+... ... bundledProductOffering :: no description value
+
+... ./Product/ProductOfferingPrice.schema.json
+... ... description :: no example value
+... ... priceType :: no example value
+... ... recurringChargePeriod :: no example value
+... ... unitOfMeasure :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+... ... price :: no example value
+... ... price :: no description value
+... ... priceAlteration :: no example value
+... ... priceAlteration :: no description value
+
+... ./Product/ProductOfferingQualification.schema.json
+... ... description :: no example value
+... ... effectiveQualificationDate :: no example value
+... ... estimatedResponseDate :: no example value
+... ... expectedQualificationDate :: no example value
+... ... expirationDate :: no example value
+... ... productOfferingQualificationDate :: no example value
+... ... provideAlternative :: no example value
+... ... provideOnlyAvailable :: no example value
+... ... provideUnavailabilityReason :: no example value
+... ... qualificationResult :: no example value
+... ... qualificationResult :: no description value
+... ... state :: no example value
+... ... productOfferingQualificationItem :: no example value
+... ... productOfferingQualificationItem :: no description value
+... ... note :: no example value
+... ... note :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... channel :: no example value
+... ... channel :: no description value
+
+... ./Product/ProductOfferingQualificationItem.schema.json
+... ... expectedActivationDate :: no example value
+... ... qualificationItemResult :: no example value
+... ... state :: no example value
+... ... eligibilityUnavailabilityReason :: no example value
+... ... eligibilityUnavailabilityReason :: no description value
+... ... category :: no example value
+... ... category :: no description value
+... ... qualificationItemRelationship :: no example value
+... ... qualificationItemRelationship :: no description value
+... ... note :: no example value
+... ... note :: no description value
+... ... product :: no example value
+... ... product :: no description value
+... ... terminationError :: no example value
+... ... terminationError :: no description value
+... ... productOffering :: no example value
+... ... productOffering :: no description value
+... ... alternateProductOfferingProposal :: no example value
+... ... alternateProductOfferingProposal :: no description value
+
+... ./Product/ProductOfferingRef.schema.json
+... ... @referredType :: no example value
+
+... ./Product/ProductOfferingTerm.schema.json
+... ... description :: no example value
+... ... duration :: no example value
+... ... validFor :: no example value
+
+... ./Product/ProductOrder.schema.json
+... ... category :: no example value
+... ... completionDate :: no example value
+... ... description :: no example value
+... ... expectedCompletionDate :: no example value
+... ... externalId :: no example value
+... ... notificationContact :: no example value
+... ... orderDate :: no example value
+... ... priority :: no example value
+... ... requestedCompletionDate :: no example value
+... ... requestedStartDate :: no example value
+... ... state :: no example value
+... ... note :: no example value
+... ... note :: no description value
+... ... orderTotalPrice :: no example value
+... ... orderTotalPrice :: no description value
+... ... orderItem :: no example value
+... ... orderItem :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... payment :: no example value
+... ... payment :: no description value
+... ... billingAccount :: no example value
+... ... billingAccount :: no description value
+... ... channel :: no example value
+... ... channel :: no description value
+
+... ./Product/ProductOrderRef.schema.json
+... ... @referredType :: no example value
+
+... ./Product/ProductPrice.schema.json
+... ... description :: no example value
+... ... priceType :: no example value
+... ... recurringChargePeriod :: no example value
+... ... unitOfMeasure :: no example value
+... ... productPriceAlteration :: no example value
+... ... productPriceAlteration :: no description value
+... ... price :: no example value
+... ... price :: no description value
+
+... ./Product/ProductRef.schema.json
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... @referredType :: no example value
+
+... ./Product/ProductRelationship.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... product :: no example value
+... ... product :: no description value
+
+... ./Product/ProductRequest.schema.json
+... ... ProductRequest :: should be renamed as ProductRequestRef if this is a reference entity
+... ... referredProduct :: no example value
+... ... referredProduct :: no description value
+
+... ./Product/ProductSpecCharRelationship.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+
+... ./Product/ProductSpecCharacteristic.schema.json
+... ... configurable :: no example value
+... ... description :: no example value
+... ... validFor :: no example value
+... ... valueType :: no example value
+... ... productSpecCharRelationship :: no example value
+... ... productSpecCharRelationship :: no description value
+... ... productSpecCharacteristicValue :: no example value
+... ... productSpecCharacteristicValue :: no description value
+
+... ./Product/ProductSpecCharacteristicValue.schema.json
+... ... default :: no example value
+... ... unitOfMeasure :: no example value
+... ... validFor :: no example value
+... ... value :: no example value
+... ... valueFrom :: no example value
+... ... valueTo :: no example value
+... ... valueType :: no example value
+
+... ./Product/ProductSpecification.schema.json
+... ... brand :: no example value
+... ... description :: no example value
+... ... isBundle :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... productNumber :: no example value
+... ... validFor :: no example value
+... ... version :: no example value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... productSpecCharacteristic :: no example value
+... ... productSpecCharacteristic :: no description value
+... ... serviceSpecification :: no example value
+... ... serviceSpecification :: no description value
+... ... productSpecificationRelationship :: no example value
+... ... productSpecificationRelationship :: no description value
+... ... resourceSpecification :: no example value
+... ... resourceSpecification :: no description value
+... ... attachment :: no example value
+... ... attachment :: no description value
+... ... bundledProductSpecification :: no example value
+... ... bundledProductSpecification :: no description value
+
+... ./Product/ProductSpecificationRef.schema.json
+... ... version :: no example value
+... ... targetResourceSchema :: no example value
+... ... targetResourceSchema :: no description value
+... ... describing :: no example value
+... ... describing :: no description value
+... ... @referredType :: no example value
+
+... ./Product/ProductSpecificationRelationship.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+
+... ./Product/ProductSpecificationSchemaRef.schema.json
+... ... @referredType :: no example value
+
+... ./Product/Promotion.schema.json
+... ... description :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+... ... pattern :: no example value
+... ... pattern :: no description value
+
+... ./Product/PromotionAction.schema.json
+... ... actionObjectId :: no example value
+... ... actionType :: no example value
+... ... actionValue :: no example value
+
+... ./Product/PromotionCriteria.schema.json
+... ... criteriaOperator :: no example value
+... ... criteriaPara :: no example value
+... ... criteriaValue :: no example value
+
+... ./Product/PromotionCriteriaGroup.schema.json
+... ... groupName :: no example value
+... ... relationTypeInGroup :: no example value
+... ... criteria :: no example value
+... ... criteria :: no description value
+
+... ./Product/PromotionPattern.schema.json
+... ... description :: no example value
+... ... priority :: no example value
+... ... relationTypeAmongGroup :: no example value
+... ... validFor :: no example value
+... ... action :: no example value
+... ... action :: no description value
+... ... criteriaGroup :: no example value
+... ... criteriaGroup :: no description value
+
+... ./Product/Recommendation.schema.json
+... ... description :: no example value
+... ... description :: no description value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+... ... order :: no example value
+... ... order :: no description value
+... ... location :: no example value
+... ... channel :: no example value
+... ... channel :: no description value
+... ... category :: no example value
+... ... shoppingCart :: no example value
+... ... party :: no example value
+... ... party :: no description value
+... ... item :: no example value
+... ... item :: no description value
+
+... ./Product/RecommendationItem.schema.json
+... ... priority :: no example value
+... ... offering :: no example value
+
+... ./Resource/LogicalResource.schema.json
+... ... value :: no example value
+
+... ./Resource/PhysicalResource.schema.json
+... ... manufactureDate :: no example value
+... ... powerState :: no example value
+... ... serialNumber :: no example value
+... ... versionNumber :: no example value
+
+... ./Resource/RealizingResourceRef.schema.json
+... ... @referredType :: no example value
+
+... ./Resource/Resource.schema.json
+... ... category :: no example value
+... ... description :: no example value
+... ... endDate :: no example value
+... ... lifecycleState :: no example value
+... ... startDate :: no example value
+... ... version :: no example value
+... ... resourceRelationship :: no example value
+... ... resourceRelationship :: no description value
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+... ... place :: no example value
+... ... place :: no description value
+... ... partyRole :: no example value
+... ... partyRole :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... note :: no example value
+... ... note :: no description value
+
+... ./Resource/ResourceCandidateRef.schema.json
+... ... version :: no example value
+... ... @referredType :: no example value
+
+... ./Resource/ResourceCharacteristic.schema.json
+... ... value :: no example value
+
+... ./Resource/ResourceOrder.schema.json
+... ... category :: no example value
+... ... completionDate :: no example value
+... ... corelationId :: no example value
+... ... description :: no example value
+... ... orderDate :: no example value
+... ... priority :: no example value
+... ... requestedCompletionDate :: no example value
+... ... requestedStartDate :: no example value
+... ... state :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... orderRelationship :: no example value
+... ... orderRelationship :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... note :: no example value
+... ... note :: no description value
+
+... ./Resource/ResourceOrderItem.schema.json
+... ... action :: no example value
+... ... quantity :: no example value
+... ... state :: no example value
+... ... resourceSpecification :: no example value
+... ... resourceSpecification :: no description value
+... ... orderItemRelationship :: no example value
+... ... orderItemRelationship :: no description value
+
+... ./Resource/ResourceOrderItemRef.schema.json
+... ... @referredType :: no example value
+
+... ./Resource/ResourceOrderItemRelationship.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... orderItem :: no example value
+... ... orderItem :: no description value
+
+... ./Resource/ResourceOrderRef.schema.json
+... ... @referredType :: no example value
+
+... ./Resource/ResourceOrderRelationship.schema.json
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... resourceOrder :: no example value
+... ... resourceOrder :: no description value
+... ... serviceOrder :: no example value
+... ... serviceOrder :: no description value
+
+... ./Resource/ResourceRef.schema.json
+... ... @referredType :: no example value
+
+... ./Resource/ResourceRelationship.schema.json
+... ... type :: no example value
+... ... type :: no description value
+... ... type :: rename to avoid conflict with @type
+... ... resourceRef :: no example value
+... ... resourceRef :: no description value
+
+... ./Resource/ResourceSpecificationRef.schema.json
+... ... version :: no example value
+... ... @referredType :: no example value
+
+... ./Resource/SupportingResource.schema.json
+... ... SupportingResource :: should be renamed as SupportingResourceRef if this is a reference entity
+
+... ./Service/AlternateServiceProposal.schema.json
+... ... alternateServiceAvailabilityDate :: no example value
+... ... alternateService :: no example value
+... ... alternateService :: no description value
+
+... ./Service/MeasureThresholdRuleViolation.schema.json
+... ... conformanceComparatorLower :: no example value
+... ... conformanceComparatorUpper :: no example value
+... ... conformanceTargetLower :: no example value
+... ... conformanceTargetUpper :: no example value
+... ... description :: no example value
+... ... numberOfAllowedCrossing :: no example value
+... ... thresholdRuleSeverity :: no example value
+... ... tolerancePeriod :: no example value
+... ... appliedConsequence :: no example value
+... ... appliedConsequence :: no description value
+
+... ./Service/MetricDefMeasureConsequence.schema.json
+... ... description :: no example value
+... ... prescribeAction :: no example value
+... ... repeatAction :: no example value
+... ... validFor :: no example value
+
+... ./Service/MetricDefMeasureThresholdRule.schema.json
+... ... conformanceComparatorLower :: no example value
+... ... conformanceComparatorUpper :: no example value
+... ... conformanceTargetLower :: no example value
+... ... conformanceTargetUpper :: no example value
+... ... description :: no example value
+... ... numberOfAllowedCrossing :: no example value
+... ... tolerancePeriod :: no example value
+... ... metricDefMeasureConsequence :: no example value
+... ... metricDefMeasureConsequence :: no description value
+
+... ./Service/QualificationItemRelationship.schema.json
+... ... QualificationItemRelationship :: should be renamed as QualificationItemRelationshipRef if this is a reference entity
+... ... relationshipType :: no example value
+
+... ./Service/QualificationRef.schema.json
+... ... qualificationItemId :: no example value
+... ... @referredType :: no example value
+
+... ./Service/QualificationRelationship.schema.json
+... ... QualificationRelationship :: should be renamed as QualificationRelationshipRef if this is a reference entity
+... ... type :: no example value
+... ... type :: no description value
+... ... type :: rename to avoid conflict with @type
+
+... ./Service/RealizingServiceRef.schema.json
+... ... @referredType :: no example value
+
+... ./Service/RelatedServiceLevelObjectiveRef.schema.json
+... ... @referredType :: no example value
+
+... ./Service/RelatedServiceRef.schema.json
+... ... @referredType :: no example value
+
+... ./Service/RelatedServiceSpecificationRef.schema.json
+... ... @referredType :: no example value
+
+... ./Service/RelatedServiceTestSpecificationRef.schema.json
+... ... @referredType :: no example value
+
+... ./Service/ResourceRef.schema.json
+... ... @referredType :: no example value
+
+... ./Service/Service.schema.json
+... ... category :: no example value
+... ... description :: no example value
+... ... endDate :: no example value
+... ... hasStarted :: no example value
+... ... isServiceEnabled :: no example value
+... ... isStateful :: no example value
+... ... orderDate :: no example value
+... ... startDate :: no example value
+... ... startMode :: no example value
+... ... state :: no example value
+... ... serviceOrder :: no example value
+... ... serviceOrder :: no description value
+... ... supportingResource :: no example value
+... ... supportingResource :: no description value
+... ... serviceRelationship :: no example value
+... ... serviceRelationship :: no description value
+... ... place :: no example value
+... ... place :: no description value
+... ... supportingService :: no example value
+... ... supportingService :: no description value
+... ... note :: no example value
+... ... note :: no description value
+... ... serviceSpecification :: no example value
+... ... serviceSpecification :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... characteristic :: no example value
+... ... characteristic :: no description value
+... ... serviceType :: no example value
+... ... serviceDate :: no example value
+
+... ./Service/ServiceCandidate.schema.json
+... ... description :: no example value
+... ... version :: no example value
+... ... validFor :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... category :: no example value
+... ... category :: no description value
+... ... serviceSpecification :: no example value
+... ... serviceSpecification :: no description value
+
+... ./Service/ServiceCandidateRef.schema.json
+... ... version :: no example value
+... ... @referredType :: no example value
+
+... ./Service/ServiceCatalog.schema.json
+... ... description :: no example value
+... ... version :: no example value
+... ... validFor :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+
+... ./Service/ServiceCategory.schema.json
+... ... description :: no example value
+... ... version :: no example value
+... ... validFor :: no example value
+... ... lifecycleStatus :: no example value
+... ... lastUpdate :: no example value
+... ... parentId :: no example value
+... ... isRoot :: no example value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... serviceCandidate :: no example value
+... ... serviceCandidate :: no description value
+... ... serviceCandidate :: recommend to add format
+... ... category :: no example value
+... ... category :: no description value
+
+... ./Service/ServiceCharacteristic.schema.json
+... ... valueType :: no example value
+... ... value :: no example value
+... ... value :: no description value
+
+... ./Service/ServiceLevelObjective.schema.json
+... ... conformanceComparator :: no example value
+... ... conformancePeriod :: no example value
+... ... conformanceTarget :: no example value
+... ... graceTimes :: no example value
+... ... graceTimes :: recommend to add format
+... ... thresholdTarget :: no example value
+... ... tolerancePeriod :: no example value
+... ... tolerancePeriod :: no description value
+... ... toleranceTarget :: no example value
+... ... validFor :: no example value
+... ... serviceLevelSpecParameter :: no example value
+... ... serviceLevelSpecParameter :: no description value
+... ... serviceLevelSpecConsequence :: no example value
+... ... serviceLevelSpecConsequence :: no description value
+
+... ./Service/ServiceLevelSpecConsequence.schema.json
+... ... prescribedAction :: no example value
+... ... validFor :: no example value
+
+... ./Service/ServiceLevelSpecParameter.schema.json
+... ... serviceParmCategory :: no example value
+... ... serviceParmPerspective :: no example value
+... ... transformationAlgorithmOfKQI :: no example value
+... ... type :: no example value
+... ... type :: rename to avoid conflict with @type
+... ... validFor :: no example value
+... ... relatedEntity :: no example value
+... ... relatedEntity :: no description value
+
+... ./Service/ServiceLevelSpecification.schema.json
+... ... description :: no example value
+... ... validFor :: no example value
+... ... relatedServiceLevelObjective :: no example value
+... ... relatedServiceLevelObjective :: no description value
+
+... ./Service/ServiceOrder.schema.json
+... ... category :: no example value
+... ... category :: no description value
+... ... completionDate :: no example value
+... ... completionDate :: no description value
+... ... description :: no example value
+... ... description :: no description value
+... ... expectedCompletionDate :: no example value
+... ... expectedCompletionDate :: no description value
+... ... externalId :: no example value
+... ... externalId :: no description value
+... ... notificationContact :: no example value
+... ... notificationContact :: no description value
+... ... orderDate :: no example value
+... ... orderDate :: no description value
+... ... priority :: no example value
+... ... priority :: no description value
+... ... requestedCompletionDate :: no example value
+... ... requestedCompletionDate :: no description value
+... ... requestedStartDate :: no example value
+... ... requestedStartDate :: no description value
+... ... startDate :: no example value
+... ... startDate :: no description value
+... ... state :: no example value
+... ... state :: no description value
+... ... note :: no example value
+... ... note :: no description value
+... ... orderItem :: no example value
+... ... orderItem :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... orderRelationship :: no example value
+... ... orderRelationship :: no description value
+
+... ./Service/ServiceOrderItem.schema.json
+... ... action :: no example value
+... ... action :: no description value
+... ... state :: no example value
+... ... state :: no description value
+... ... service :: no example value
+... ... service :: no description value
+... ... orderItemRelationship :: no example value
+... ... orderItemRelationship :: no description value
+... ... appointment :: no example value
+... ... appointment :: no description value
+
+... ./Service/ServiceOrderRef.schema.json
+... ... serviceOrderItemId :: no example value
+... ... serviceOrderItemId :: no description value
+... ... @referredType :: no example value
+
+... ./Service/ServiceQualification.schema.json
+... ... description :: no example value
+... ... description :: no description value
+... ... effectiveQualificationDate :: no example value
+... ... effectiveQualificationDate :: no description value
+... ... effectiveQualificationDate :: recommend to add format
+... ... estimatedResponseDate :: no example value
+... ... estimatedResponseDate :: no description value
+... ... estimatedResponseDate :: recommend to add format
+... ... expectedQualificationDate :: no example value
+... ... expectedQualificationDate :: no description value
+... ... expectedQualificationDate :: recommend to add format
+... ... expirationDate :: no example value
+... ... expirationDate :: no description value
+... ... expirationDate :: recommend to add format
+... ... provideAlternative :: no example value
+... ... provideAlternative :: no description value
+... ... provideOnlyAvailable :: no example value
+... ... provideOnlyAvailable :: no description value
+... ... provideUnavailabilityReason :: no example value
+... ... provideUnavailabilityReason :: no description value
+... ... serviceQualificationdateTime :: no example value
+... ... serviceQualificationdateTime :: no description value
+... ... state :: no example value
+... ... state :: no description value
+... ... serviceQualificationItem :: no example value
+... ... serviceQualificationItem :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... serviceQualificationDate :: no example value
+... ... externalId :: no example value
+... ... qualificationResult :: no example value
+
+... ./Service/ServiceQualificationItem.schema.json
+... ... expectedActivationDate :: no example value
+... ... expectedActivationDate :: no description value
+... ... expectedActivationDate :: recommend to add format
+... ... qualificationResult :: no example value
+... ... qualificationResult :: no description value
+... ... state :: no example value
+... ... state :: no description value
+... ... service :: no example value
+... ... service :: no description value
+... ... qualificationRelationship :: no example value
+... ... qualificationRelationship :: no description value
+... ... expectedServiceAvailabilityDate :: no example value
+... ... expirationDate :: no example value
+... ... eligibilityUnavailabilityReason :: no example value
+... ... eligibilityUnavailabilityReason :: no description value
+... ... category :: no example value
+... ... category :: no description value
+... ... qualificationItemRelationship :: no example value
+... ... qualificationItemRelationship :: no description value
+... ... terminationError :: no example value
+... ... terminationError :: no description value
+... ... alternateServiceProposal :: no example value
+... ... alternateServiceProposal :: no description value
+
+... ./Service/ServiceRef.schema.json
+... ... @referredType :: no example value
+
+... ./Service/ServiceRelationship.schema.json
+... ... relationshipType :: no example value
+... ... service :: no example value
+... ... service :: no description value
+... ... serviceRef :: no example value
+... ... serviceRef :: no description value
+
+... ./Service/ServiceSpecCharRelationship.schema.json
+... ... relationshipType :: no example value
+... ... role :: no example value
+... ... validFor :: no example value
+
+... ./Service/ServiceSpecCharacteristic.schema.json
+... ... description :: no example value
+... ... valueType :: no example value
+... ... configurable :: no example value
+... ... validFor :: no example value
+... ... @valueSchemaLocation :: no example value
+... ... minCardinality :: no example value
+... ... maxCardinality :: no example value
+... ... isUnique :: no example value
+... ... regex :: no example value
+... ... extensible :: no example value
+... ... serviceSpecCharacteristicValue :: no example value
+... ... serviceSpecCharacteristicValue :: no description value
+... ... serviceSpecCharRelationship :: no example value
+... ... serviceSpecCharRelationship :: no description value
+
+... ./Service/ServiceSpecCharacteristicValue.schema.json
+... ... valueType :: no example value
+... ... isDefault :: no example value
+... ... value :: no example value
+... ... unitOfMeasure :: no example value
+... ... validFor :: no example value
+... ... valueFrom :: no example value
+... ... valueTo :: no example value
+... ... rangeInterval :: no example value
+... ... regex :: no example value
+
+... ./Service/ServiceSpecRelationship.schema.json
+... ... relationshipType :: no example value
+... ... role :: no example value
+... ... validFor :: no example value
+
+... ./Service/ServiceSpecification.schema.json
+... ... description :: no example value
+... ... version :: no example value
+... ... validFor :: no example value
+... ... lastUpdate :: no example value
+... ... lifecycleStatus :: no example value
+... ... isBundle :: no example value
+... ... resourceSpecification :: no example value
+... ... resourceSpecification :: no description value
+... ... attachment :: no example value
+... ... attachment :: no description value
+... ... serviceSpecCharacteristic :: no example value
+... ... serviceSpecCharacteristic :: no description value
+... ... relatedParty :: no example value
+... ... relatedParty :: no description value
+... ... serviceSpecRelationship :: no example value
+... ... serviceSpecRelationship :: no description value
+... ... targetServiceSchema :: no example value
+... ... targetServiceSchema :: no description value
+
+... ./Service/ServiceSpecificationRef.schema.json
+... ... version :: no example value
+... ... targetServiceSchema :: no example value
+... ... targetServiceSchema :: no description value
+... ... @referredType :: no example value
+
+... ./Service/ServiceTest.schema.json
+... ... description :: no example value
+... ... endDateTime :: no example value
+... ... mode :: no example value
+... ... startDateTime :: no example value
+... ... state :: no example value
+... ... relatedService :: no example value
+... ... relatedService :: no description value
+... ... relatedServiceTestSpecification :: no example value
+... ... relatedServiceTestSpecification :: no description value
+... ... testMeasure :: no example value
+... ... testMeasure :: no description value
+... ... serviceTestCharacteristic :: no example value
+... ... serviceTestCharacteristic :: no description value
+
+... ./Service/ServiceTestCharacteristic.schema.json
+... ... value :: no example value
+
+... ./Service/ServiceTestSpecification.schema.json
+... ... description :: no example value
+... ... validFor :: no example value
+... ... testMeasureDefinition :: no example value
+... ... testMeasureDefinition :: no description value
+... ... relatedServiceSpecification :: no example value
+... ... relatedServiceSpecification :: no description value
+
+... ./Service/SupportingService.schema.json
+... ... SupportingService :: should be renamed as SupportingServiceRef if this is a reference entity
+... ... category :: no example value
+
+... ./Service/TargetServiceSchema.schema.json
+... ... TargetServiceSchema :: no properties defined
+
+... ./Service/TestMeasure.schema.json
+... ... accuracy :: no example value
+... ... captureDateTime :: no example value
+... ... captureMethod :: no example value
+... ... metricDescription :: no example value
+... ... metricHref :: no example value
+... ... metricName :: no example value
+... ... unitOfMeasure :: no example value
+... ... value :: no example value
+... ... valueType :: no example value
+... ... measureThresholdRuleViolation :: no example value
+... ... measureThresholdRuleViolation :: no description value
+
+... ./Service/TestMeasureDefinition.schema.json
+... ... captureFrequency :: no example value
+... ... captureMethod :: no example value
+... ... capturePeriod :: no example value
+... ... metricDescription :: no example value
+... ... metricHref :: no example value
+... ... metricName :: no example value
+... ... unitOfMeasure :: no example value
+... ... validFor :: no example value
+... ... valueType :: no example value
+... ... metircDefMeasureTresholdRule :: no example value
+... ... metircDefMeasureTresholdRule :: no description value
+
+
+OK - schemas without error(s) or issue(s):
+... ./Common/CommonComponents.schema.json
+... ./Service/ServiceStateEnumeration.schema.json
+
