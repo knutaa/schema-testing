@@ -54,9 +54,9 @@ jobs:
             FILE=validation-`date -u "+%Y-%m-%dT%H:%M:%SZ"`.txt
             cp /tmp/mocha/validation_results.txt $FILE
             git config credential.helper 'cache --timeout=120'
-            git config user.email "knut.johannessen@online.no"
+            git config user.email "${EMAIL}"
             git config user.name "Deployment Bot"
             git add $FILE
             git commit --allow-empty -m "Add results"
             # Push quietly to prevent showing the token in log
-            git push -q https://github.com/knutaa/schema-testing.git master
+            git push -q https://${GITHUB}@github.com/knutaa/schema-testing.git master
